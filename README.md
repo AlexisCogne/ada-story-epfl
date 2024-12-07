@@ -9,6 +9,7 @@
    => Access website: http://localhost:4000
 ---
 6. Push the changes to the gh-pages branch (git push origin gh-pages)
+7. Observe modifications on the website: https://alexiscogne.github.io/ada-story-epfl/
 
 
 
