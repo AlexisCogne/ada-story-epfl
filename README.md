@@ -1,15 +1,21 @@
 # How to modify the website for contributors
-1. Clone this repository on your computer
-2. Ensure to be on the gh-pages branch (git checkout gh-pages)
+0. Clone this repository on your computer
+   
+Then every time:
+
+1. Ensure to be on the gh-pages branch (git checkout gh-pages)
+2. Pull the latest changes: git pull origin gh-pages
 3. Perform the modification desired
 4. Stage and Commit changes (git add <file-changes>) then  (git commit -m “<commit-message>”)
-----
-5. If you want to view changes locally (Requires having Ruby [not the MacOS pre-installed version] and bundle installed !)
+
+---
+- If you want to view changes locally 
+(Requires having Ruby [not the MacOS pre-installed version] and bundle installed !)
    => Run: bundle exec jekyll serve 
    => Access website: http://localhost:4000
 ---
-6. Push the changes to the gh-pages branch (git push origin gh-pages)
-7. Observe modifications on the website: https://alexiscogne.github.io/ada-story-epfl/
+5. Push the changes to the gh-pages branch (git push origin gh-pages)
+6. Observe modifications on the website: https://alexiscogne.github.io/ada-story-epfl/
 
 
 
