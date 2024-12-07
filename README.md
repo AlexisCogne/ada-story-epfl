@@ -15,7 +15,7 @@ Then every time:
    => Access website: http://localhost:4000
 ---
 5. Push the changes to the gh-pages branch (git push origin gh-pages)
-6. Observe modifications on the website: https://alexiscogne.github.io/ada-story-epfl/
+6. Observe modifications on the website (refresh cookies): https://alexiscogne.github.io/ada-story-epfl/
 
 
 
