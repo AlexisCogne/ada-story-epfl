@@ -1,3 +1,20 @@
+# How to modify the website for contributors
+1. Clone this repository on your computer
+2. Ensure to be on the gh-pages branch (git checkout gh-pages)
+3. Perform the modification desired
+4. Stage and Commit changes (git add <file-changes>) then  (git commit -m “<commit-message>”)
+----
+5. If you want to view changes locally (Requires having Ruby [not the MacOS pre-installed version] and bundle installed !)
+   => Run: bundle exec jekyll serve 
+   => Access website: http://localhost:4000
+---
+6. Push the changes to the gh-pages branch (git push origin gh-pages)
+
+
+
+
+------------------------------------------
+# Readme from the source template
 # Lanyon
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
