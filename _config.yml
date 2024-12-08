@@ -2,7 +2,7 @@
 title:               Abracadabra
 tagline:             'ADA Datastory'
 description:         'Welcome'
-url:                 site.url
+url:                 ''
 baseurl:             'ada-story-epfl'
 paginate:            5
 permalink:           pretty
