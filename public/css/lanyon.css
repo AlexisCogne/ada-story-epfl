@@ -144,15 +144,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: #000000; /* Black text for better contrast */
+  display: flex; /* Align title and nav links horizontally */
+  justify-content: space-between; /* Space out the title and links */
+  align-items: center; /* Vertically center the elements */
 }
 
-.masthead-title a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.masthead-title a:hover {
-  text-decoration: underline;
+.masthead-title span {
+  font-size: 2rem; /* Adjust the size of the main title */
 }
 
 .masthead-title small {
@@ -162,14 +160,63 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
+.masthead-title nav {
+  display: inline-flex; /* Align nav links horizontally */
+}
+
+.masthead-title nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align items in a row */
+}
+
+.masthead-title nav ul li {
+  margin-right: 20px;
+}
+
+.masthead-title nav ul li a {
+  text-decoration: none;
+  color: #007bff; /* Set color for links */
+  font-size: 16px; /* Font size for links */
+  font-weight: bold; /* Bold for better emphasis */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.masthead-title nav ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Change color on hover */
+}
+
+.masthead-title nav ul li a:focus {
+  outline: none; /* Remove outline when focusing on links */
+  border-bottom: 2px solid #0056b3; /* Add border on focus */
+}
+
+/* Responsive behavior */
 @media (max-width: 48em) {
   .masthead-title {
+    flex-direction: column; /* Stack title and links vertically on smaller screens */
     text-align: center;
   }
+
   .masthead-title small {
-    display: none;
+    display: none; /* Hide tagline on smaller screens */
+  }
+
+  .masthead-title nav {
+    margin-top: 1rem; /* Add spacing between title and nav */
+  }
+
+  .masthead-title nav ul {
+    flex-direction: column; /* Stack the nav links vertically on mobile */
+  }
+
+  .masthead-title nav ul li {
+    margin-bottom: 10px; /* Add margin between links */
   }
 }
+
 
 
 
