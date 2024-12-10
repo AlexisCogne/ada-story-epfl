@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
-  background: linear-gradient(to bottom, #3498db, transparent); /* Fade-out effect */
+  background: linear-gradient(to bottom, #3282B8, transparent); /* Fade-out effect */
   position: sticky; /* Keeps it at the top during scroll */
   top: 0;
   z-index: 10; /* Ensure it stays above other content */
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .masthead:hover {
-  background: #1abc9c; /* Change to a solid color on hover */
+  background: #0F4C75; /* Change to a solid color on hover */
 }
 
 .masthead-title {
