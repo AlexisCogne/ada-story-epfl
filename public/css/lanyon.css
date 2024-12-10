@@ -143,11 +143,11 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #fff; /* White text for better contrast */
+  color: #000000; /* Black text for better contrast */
 }
 
 .masthead-title a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
-  color: #f0f0f0; /* Slightly lighter than the main title */
+  color: #343434; /* Slightly lighter than the main title */
   letter-spacing: 0;
 }
 
