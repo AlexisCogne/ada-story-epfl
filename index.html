@@ -10,14 +10,14 @@ title: Research on Protein Mutations and Ligand Binding
     
   </header>
 
-  <section class="abstract">
+  <section id="abstract">
     <h2>Abstract</h2>
     <p>
       This project investigates how mutations in protein sequences affect ligand binding affinities, focusing on reference-mutant groups with a shared ligand. To identify mutation positions and types, we will use an alignment method that compares each mutated sequence to a reference. Potential key domains within the reference protein can be highlighted by plotting IC50 values against mutation positions and incorporating additional data on mutation characteristics, such as occurrence probability and chemical properties. Additionally, we aim to develop a tool that assists researchers in fastening their ligand search when working with a new protein, replacing the usual resource-intensive, blind search with a protein-specific approach. To simplify the computation of protein similarity, we will embed proteins into a Euclidean space using a language model. Using their best-binding ligands as a label and after clustering ligands into coarse groups, we will train a classifier to output a potential ligand group given a protein sequence.
     </p>
   </section>
 
-  <section class="research-questions">
+  <section id="research-questions">
     <h2>Research Questions</h2>
     <ul>
       <li>How do mutations in reference-mutant protein groups affect binding affinities with specific ligands?</li>
@@ -27,14 +27,14 @@ title: Research on Protein Mutations and Ligand Binding
     </ul>
   </section>
 
-  <section class="methodology">
+  <section id="methodology">
     <h2>Methodology</h2>
     <p>
       To tackle these questions, we will use a multi-step approach. First, we will align mutated protein sequences to reference proteins to identify the mutation positions and types. We will then visualize the mutation sites using IC50 values and additional mutation characteristics, such as probability and chemical properties. For the development of a ligand search tool, we will leverage protein embeddings in Euclidean space, which will help in clustering ligands based on protein similarity. The classifier we develop will predict ligand groups by using protein sequence embeddings and ligand clusters.
     </p>
   </section>
 
-  <section class="expected-results">
+  <section id="expected-results">
     <h2>Expected Results</h2>
     <p>
       We expect to identify key mutation sites that significantly affect ligand binding affinity and demonstrate the utility of protein embeddings in classifying ligands based on their interaction patterns. The classifier trained on these embeddings should be able to predict ligand groups for new protein sequences effectively, making the ligand search process faster and more accurate.
