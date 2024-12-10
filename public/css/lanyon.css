@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
  * Masthead
  *
  * Super small header above the content for site name and short description.
- */
+ 
 
 .masthead {
   padding-top:    1rem;
@@ -122,6 +122,55 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+*/
+/* Masthead */
+.masthead {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(to bottom, #3498db, transparent); /* Fade-out effect */
+  position: sticky; /* Keeps it at the top during scroll */
+  top: 0;
+  z-index: 10; /* Ensure it stays above other content */
+  transition: background-color 0.3s ease; /* Smooth transition for interactivity */
+}
+
+.masthead:hover {
+  background: #1abc9c; /* Change to a solid color on hover */
+}
+
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff; /* White text for better contrast */
+}
+
+.masthead-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.masthead-title a:hover {
+  text-decoration: underline;
+}
+
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: #f0f0f0; /* Slightly lighter than the main title */
+  letter-spacing: 0;
+}
+
+@media (max-width: 48em) {
+  .masthead-title {
+    text-align: center;
+  }
+  .masthead-title small {
+    display: none;
+  }
+}
+
 
 
 /*
@@ -556,3 +605,4 @@ a.pagination-item:hover {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
