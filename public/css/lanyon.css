@@ -134,6 +134,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 10; /* Ensure it stays above other content */
   transition: background-color 0.3s ease; /* Smooth transition for interactivity */
+  width: 100%; /* Ensure it spans the entire width of the page */
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
 }
 
 .masthead:hover {
@@ -147,6 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex; /* Align title and nav links horizontally */
   justify-content: space-between; /* Space out the title and links */
   align-items: center; /* Vertically center the elements */
+  width: 100%; /* Ensure the title and navigation take up the full width */
 }
 
 .masthead-title span {
@@ -216,6 +219,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px; /* Add margin between links */
   }
 }
+
 
 
 
