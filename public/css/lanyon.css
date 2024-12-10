@@ -72,18 +72,28 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
+/* Modify container class to increase width */
 .container {
-  max-width: 28rem;
+  max-width: 45rem;  /* Increased width for larger text areas */
+  margin: 0 auto;  /* Center the container */
 }
+
 @media (min-width: 38em) {
   .container {
-    max-width: 32rem;
+    max-width: 48rem;  /* Increased width for medium screens */
   }
 }
+
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 56rem;  /* Increased width for large screens */
   }
+}
+
+/* Apply text justification to content */
+.content {
+  text-align: justify; /* Justifies the text */
+  line-height: 1.6; /* Optional: Adds line spacing for readability */
 }
 
 
