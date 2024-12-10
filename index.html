@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-
+<!-- Original code
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -34,4 +34,49 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
+</div>
+
+ -->
+
+<div class="main-content">
+  <header>
+    <h1>Welcome to My Story</h1>
+    <p>A simple website to share my journey and experiences.</p>
+  </header>
+
+  <section class="story">
+    <h2>The Beginning of My Journey</h2>
+    <p>
+      Welcome! This is the story of how I embarked on a journey of discovery and growth. It all started when...
+      <!-- Replace this with the beginning of your story -->
+    </p>
+
+    <h2>The Challenges I Faced</h2>
+    <p>
+      Along the way, I encountered many obstacles that pushed me to my limits. There were times I thought I couldn’t continue, but I...
+      <!-- Add details about the challenges -->
+    </p>
+
+    <h2>The Turning Point</h2>
+    <p>
+      But everything changed when I encountered something unexpected. This moment was a turning point that made me realize...
+      <!-- Share the pivotal moment -->
+    </p>
+
+    <h2>Lessons Learned</h2>
+    <p>
+      Through this journey, I’ve learned valuable lessons about perseverance, patience, and the importance of staying true to myself...
+      <!-- Share the key lessons -->
+    </p>
+
+    <h2>Where I Am Now</h2>
+    <p>
+      Today, I am proud of how far I've come, but I know the journey is far from over. I’m excited for the next chapter and what lies ahead...
+      <!-- Discuss the present and future -->
+    </p>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </footer>
 </div>
