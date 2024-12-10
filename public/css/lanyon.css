@@ -154,13 +154,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead-title span {
   font-size: 2rem; /* Adjust the size of the main title */
+  flex-shrink: 0; /* Prevent the title from shrinking */
 }
 
 .masthead-title small {
-  font-size: 75%;
+  font-size: 1.2rem; /* Adjust the size of the tagline */
   font-weight: 400;
   color: #343434; /* Slightly lighter than the main title */
-  letter-spacing: 0;
+  margin-left: 1rem; /* Space between title and tagline */
+  flex-grow: 0; /* Ensure tagline does not stretch */
 }
 
 .masthead-title nav {
@@ -180,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead-title nav ul li a {
   text-decoration: none;
-  color: #007bff; /* Set color for links */
+  color: #15191e; /* Set color for links */
   font-size: 16px; /* Font size for links */
   font-weight: bold; /* Bold for better emphasis */
   transition: color 0.3s ease; /* Smooth color transition */
@@ -188,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead-title nav ul li a:hover {
   text-decoration: underline;
-  color: #0056b3; /* Change color on hover */
+  color: #ffffff; /* Change color on hover */
 }
 
 .masthead-title nav ul li a:focus {
