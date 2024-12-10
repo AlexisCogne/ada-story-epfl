@@ -1,78 +1,42 @@
 ---
 layout: default
-title: Home
+title: Research on Protein Mutations and Ligand Binding
 ---
-<!-- Original code
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
- -->
 
 <div class="main-content">
   <header>
-    <h1>Welcome to My Story</h1>
-    <p>A simple website to share my journey and experiences.</p>
+    <h1>Research on Protein Mutations and Ligand Binding</h1>
+    <p>This project investigates how mutations in protein sequences affect ligand binding affinities, focusing on reference-mutant groups with a shared ligand.</p>
   </header>
 
-  <section class="story">
-    <h2>The Beginning of My Journey</h2>
+  <section class="abstract">
+    <h2>Abstract</h2>
     <p>
-      Welcome! This is the story of how I embarked on a journey of discovery and growth. It all started when...
-      <!-- Replace this with the beginning of your story -->
+      This project investigates how mutations in protein sequences affect ligand binding affinities, focusing on reference-mutant groups with a shared ligand. To identify mutation positions and types, we will use an alignment method that compares each mutated sequence to a reference. Potential key domains within the reference protein can be highlighted by plotting IC50 values against mutation positions and incorporating additional data on mutation characteristics, such as occurrence probability and chemical properties. Additionally, we aim to develop a tool that assists researchers in fastening their ligand search when working with a new protein, replacing the usual resource-intensive, blind search with a protein-specific approach. To simplify the computation of protein similarity, we will embed proteins into a Euclidean space using a language model. Using their best-binding ligands as a label and after clustering ligands into coarse groups, we will train a classifier to output a potential ligand group given a protein sequence.
     </p>
+  </section>
 
-    <h2>The Challenges I Faced</h2>
+  <section class="research-questions">
+    <h2>Research Questions</h2>
+    <ul>
+      <li>How do mutations in reference-mutant protein groups affect binding affinities with specific ligands?</li>
+      <li>Can we identify key mutation sites that alter binding affinity?</li>
+      <li>Can we predict the coarse pattern of interaction of an unseen protein using its learned sequence embedding and ligand clustering?</li>
+      <li>Can a low-dimensional space capture meaningful protein-ligand behaviors? E.g., protein embeddings cluster according to their similarity and clusters can be labeled according to their binding affinity with ligand groups.</li>
+    </ul>
+  </section>
+
+  <section class="methodology">
+    <h2>Methodology</h2>
     <p>
-      Along the way, I encountered many obstacles that pushed me to my limits. There were times I thought I couldn’t continue, but I...
-      <!-- Add details about the challenges -->
+      To tackle these questions, we will use a multi-step approach. First, we will align mutated protein sequences to reference proteins to identify the mutation positions and types. We will then visualize the mutation sites using IC50 values and additional mutation characteristics, such as probability and chemical properties. For the development of a ligand search tool, we will leverage protein embeddings in Euclidean space, which will help in clustering ligands based on protein similarity. The classifier we develop will predict ligand groups by using protein sequence embeddings and ligand clusters.
     </p>
+  </section>
 
-    <h2>The Turning Point</h2>
+  <section class="expected-results">
+    <h2>Expected Results</h2>
     <p>
-      But everything changed when I encountered something unexpected. This moment was a turning point that made me realize...
-      <!-- Share the pivotal moment -->
-    </p>
-
-    <h2>Lessons Learned</h2>
-    <p>
-      Through this journey, I’ve learned valuable lessons about perseverance, patience, and the importance of staying true to myself...
-      <!-- Share the key lessons -->
-    </p>
-
-    <h2>Where I Am Now</h2>
-    <p>
-      Today, I am proud of how far I've come, but I know the journey is far from over. I’m excited for the next chapter and what lies ahead...
-      <!-- Discuss the present and future -->
+      We expect to identify key mutation sites that significantly affect ligand binding affinity and demonstrate the utility of protein embeddings in classifying ligands based on their interaction patterns. The classifier trained on these embeddings should be able to predict ligand groups for new protein sequences effectively, making the ligand search process faster and more accurate.
     </p>
   </section>
 
