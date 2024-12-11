@@ -2,36 +2,50 @@
 <select id="ligand-selection">
     <option value="ligand_1">Ligand #1</option>
     <option value="ligand_2">Ligand #2</option>
+    <option value="ligand_3">Ligand #3</option>
 </select>
-<label for="factor-select">Option:</label>
-<select id="factor-select">
-    <option value="distance">A</option>
-    <option value="wealth">B</option>
+
+<label for="view-select">Select a view:</label>
+<select id="view-select">
+    <option value="plot">Plot</option>
+    <option value="structure">Structure</option>
 </select>
-<div class="similarity-graph hidden" id="ligand_1_distance">
-    {% include_relative public/assets/ligand_representation/ligand_1_distance.html %}
+
+<!-- Ligand #1 -->
+<div class="similarity-graph hidden" id="ligand_1_plot">
+    {% include_relative public/assets/ligand_representation/ligand_1_plot.html %}
 </div>
-<div class="similarity-graph hidden" id="ligand_1_wealth">
-    {% include_relative public/assets/ligand_representation/ligand_1_wealth.html %}
+<div class="similarity-graph hidden" id="ligand_1_structure">
+    {% include_relative public/assets/ligand_representation/ligand_1_structure.html %}
 </div>
-<div class="similarity-graph hidden" id="ligand_2_distance">
-    {% include_relative public/assets/ligand_representation/ligand_2_distance.html %}
+
+<!-- Ligand #2 -->
+<div class="similarity-graph hidden" id="ligand_2_plot">
+    {% include_relative public/assets/ligand_representation/ligand_2_plot.html %}
 </div>
-<div class="similarity-graph hidden" id="ligand_2_wealth">
-    {% include_relative public/assets/ligand_representation/ligand_1_wealth.html %}
+<div class="similarity-graph hidden" id="ligand_2_structure">
+    {% include_relative public/assets/ligand_representation/ligand_2_structure.html %}
+</div>
+
+<!-- Ligand #3 -->
+<div class="similarity-graph hidden" id="ligand_3_plot">
+    {% include_relative public/assets/ligand_representation/ligand_3_plot.html %}
+</div>
+<div class="similarity-graph hidden" id="ligand_3_structure">
+    {% include_relative public/assets/ligand_representation/ligand_3_structure.html %}
 </div>
 
 <script>
     function updateGraphs() {
-        const metric = document.getElementById("ligand-selection").value;
-        const factor = document.getElementById("factor-select").value;
+        const ligand = document.getElementById("ligand-selection").value;
+        const view = document.getElementById("view-select").value;
 
         // Hide all graphs initially
         const allGraphs = document.querySelectorAll(".similarity-graph");
         allGraphs.forEach(graph => graph.classList.add("hidden"));
 
-        // Construct the ID based on the metric and factor
-        const graphId = `${metric}_${factor}`;
+        // Construct the ID based on the ligand and view
+        const graphId = `${ligand}_${view}`;
         const selectedGraph = document.getElementById(graphId);
 
         // Show the selected graph
@@ -41,7 +55,7 @@
     }
 
     document.getElementById("ligand-selection").addEventListener("change", updateGraphs);
-    document.getElementById("factor-select").addEventListener("change", updateGraphs);
+    document.getElementById("view-select").addEventListener("change", updateGraphs);
 
     // Initial update
     updateGraphs();
