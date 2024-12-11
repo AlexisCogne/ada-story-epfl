@@ -141,12 +141,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
-  background: linear-gradient(to bottom, #3282B8, transparent); /* Gradient background */
-  position: sticky; /* Keeps it at the top during scroll */
-  top: 0;
-  z-index: 100; /* Ensure it stays above other content */
-  width: 100%; /* Span the full width of the viewport */
-  box-sizing: border-box; /* Include padding and border in width */
+  background: linear-gradient(to bottom, #3282B8, transparent);
+  position: fixed; /* Fix the masthead at the top of the page */
+  top: 0; /* Stick it to the top */
+  left: 0; /* Ensure it spans the full width */
+  width: 100%; /* Full width */
+  z-index: 10; /* Keep it above other content */
+  transition: background-color 0.3s ease; /* Smooth transition for interactivity */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .masthead:hover {
