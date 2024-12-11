@@ -669,3 +669,7 @@ a.pagination-item:hover {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
 
+/* Hidden plots after selection of another plot*/
+.hidden {
+  display: none;
+}
