@@ -672,6 +672,16 @@ a.pagination-item:hover {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
 
+
+/* Ensures the ligand representation section takes full width */
+#ligand-representation {
+  width: 100%;  /* Ensures the section uses the full width of its parent container */
+  max-width: 100%; /* Optional: Prevents any parent element from limiting the width */
+}
+/* Ensures the plot containers (divs) take full width */
+.similarity-graph {
+  width: 100%;  /* Ensures plot divs take up the full width */
+}
 /* Hidden plots after selection of another plot*/
 .hidden {
   display: none;
