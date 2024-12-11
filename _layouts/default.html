@@ -4,19 +4,18 @@
   {% include head.html %}
 
   <body>
-
-
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
-      <div class="masthead" style="position: sticky; top: 0; background: white; z-index: 1000; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <h3 class="masthead-title" style="display: flex; align-items: center; justify-content: space-between;">
+      <!-- Sticky Masthead -->
+      <div class="masthead">
+        <h3 class="masthead-title">
           <span>{{ site.title }}</span>
           <small>{{ site.tagline }}</small>
           <!-- Navigation Links -->
           <nav>
-            <ul style="list-style-type: none; padding: 0; margin: 0; display: inline-flex;">
-              <li style="margin-right: 20px;"><a href="#abstract">Abstract</a></li>
+            <ul>
+              li style="margin-right: 20px;"><a href="#abstract">Abstract</a></li>
               <li style="margin-right: 20px;"><a href="#research-questions">Research Questions</a></li>
               <li style="margin-right: 20px;"><a href="#methodology">Methodology</a></li>
               <li style="margin-right: 20px;"><a href="#expected-results">Expected Results</a></li>
@@ -25,6 +24,7 @@
         </h3>
       </div>
 
+      <!-- Page Content -->
       <div class="container content">
         {{ content }}
       </div>
