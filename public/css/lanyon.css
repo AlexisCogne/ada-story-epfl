@@ -184,11 +184,16 @@ h1, h2, h3, h4, h5, h6 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Align items in a row */
+  display: inline-flex; /* Align items in a row */
+  align-items: center; /* Ensure the list items are vertically aligned */
 }
 
 .masthead-title nav ul li {
   margin-right: 20px;
+}
+
+nav ul li img {
+  vertical-align: middle; /* Ensure the icons align properly with the text */
 }
 
 .masthead-title nav ul li a {
@@ -237,7 +242,6 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   background-color: #88304E; /* Footer background color */
   color: #ffffff; /* Text color for the footer */
-  padding: 1rem; /* Padding to create space inside the footer */
   text-align: center; /* Center align text */
   font-size: 0.9rem; /* Slightly smaller font size */
   position: relative; /* Ensure it stays below other content */
