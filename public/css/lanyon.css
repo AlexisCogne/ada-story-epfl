@@ -177,14 +177,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .masthead-title nav {
-  display: inline-flex; /* Align nav links horizontally */
+  display: flex; /* Align nav links horizontally */
+  align-items: center; /* Vertically align items within the nav */
 }
 
 .masthead-title nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: inline-flex; /* Align items in a row */
+  display: flex; /* Align items in a row */
   align-items: center; /* Ensure the list items are vertically aligned */
 }
 
