@@ -196,6 +196,10 @@ nav ul li img {
   vertical-align: middle; /* Ensure the icons align properly with the text */
 }
 
+nav ul li img + img {
+  margin-left: 10px; /* Adjust this value to reduce space between the two images */
+}
+
 .masthead-title nav ul li a {
   text-decoration: none;
   color: #15191e; /* Set color for links */
