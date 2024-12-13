@@ -260,7 +260,7 @@ nav ul li img + img {
   display: flex; /* Use flexbox for vertical and horizontal centering */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 80px; /* Adjust the height to your preference */
+  min-height: 140px; /* Adjust the height to your preference */
 }
 
 .footer {
@@ -303,6 +303,7 @@ nav ul li img + img {
   width: 20px; /* Set the size of the icon */
   height: 20px; /* Set the size of the icon */
   vertical-align: middle; /* Align the icon with the middle of the text */
+  margin-bottom: -15px;
 }
 
 
