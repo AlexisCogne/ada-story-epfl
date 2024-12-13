@@ -137,8 +137,8 @@ h1, h2, h3, h4, h5, h6 {
 */
 /* Masthead */
 .masthead {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 0rem;
   border-bottom: 1px solid #eee;
   background: linear-gradient(to right, #311D3F, #E23E57);
@@ -161,6 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; /* Ensure the title and navigation take up the full width */
   text-align: center; /* Ensure centered text alignment */
   font-family: 'fonttitle', sans-serif; /* Apply the custom font family */
+  padding-left: 20px;
 }
 
 .masthead-title span {
@@ -253,7 +254,8 @@ nav ul li img + img {
   position: relative; /* Ensure it stays below other content */
   background: linear-gradient(to right, #E23E57, #311D3F);
   width: 100%; /* Full width */
-  margin-top: 2rem; /* Add space between the footer and the content above */
+  padding: 2rem 0; /* Add more padding to make it higher */
+  margin-top: auto; /* Push the footer to the bottom */
 }
 
 
