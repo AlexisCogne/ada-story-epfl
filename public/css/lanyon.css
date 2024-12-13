@@ -260,7 +260,7 @@ nav ul li img + img {
   display: flex; /* Use flexbox for vertical and horizontal centering */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 140px; /* Adjust the height to your preference */
+  min-height: 100px; /* Adjust the height to your preference */
 }
 
 .footer {
@@ -268,12 +268,6 @@ nav ul li img + img {
   color: #ffffff; /* White text color */
   padding: 20px;
   text-align: center;
-}
-
-.footer p {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 15px; /* Add space between the title and the list */
 }
 
 .team-list {
@@ -303,7 +297,7 @@ nav ul li img + img {
   width: 20px; /* Set the size of the icon */
   height: 20px; /* Set the size of the icon */
   vertical-align: middle; /* Align the icon with the middle of the text */
-  margin-bottom: -15px;
+  margin-bottom: 0;
 }
 
 
