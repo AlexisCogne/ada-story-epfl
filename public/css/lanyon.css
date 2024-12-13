@@ -259,6 +259,34 @@ nav ul li img + img {
   margin-top: auto; /* Push the footer to the bottom */
 }
 
+.footer p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px; /* Add space between the title and the list */
+}
+
+.team-list {
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center the list */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.team-list li {
+  display: flex; /* Align the name and the icon horizontally */
+  align-items: center; /* Vertically align text and icon */
+  margin-right: 20px; /* Space between team members */
+}
+
+.team-list li a {
+  margin-left: 10px; /* Space between name and GitHub icon */
+}
+
+.team-list li img {
+  width: 20px; /* Set the size of the icon */
+  height: 20px; /* Set the size of the icon */
+}
 
 
 /*
