@@ -257,6 +257,10 @@ nav ul li img + img {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-top: auto; /* Push the footer to the bottom */
+  display: flex; /* Use flexbox for vertical and horizontal centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 80px; /* Adjust the height to your preference */
 }
 
 .footer {
