@@ -254,7 +254,8 @@ nav ul li img + img {
   position: relative; /* Ensure it stays below other content */
   background: linear-gradient(to right, #E23E57, #311D3F);
   width: 100%; /* Full width */
-  padding: 1rem 0; /* Add more padding to make it higher */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-top: auto; /* Push the footer to the bottom */
 }
 
