@@ -259,6 +259,13 @@ nav ul li img + img {
   margin-top: auto; /* Push the footer to the bottom */
 }
 
+.footer {
+  background-color: #333; /* Dark background for footer */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  text-align: center;
+}
+
 .footer p {
   font-size: 1rem;
   font-weight: bold;
@@ -279,6 +286,11 @@ nav ul li img + img {
   margin-right: 20px; /* Space between team members */
 }
 
+.team-list li span {
+  display: inline-flex; /* Ensure the span behaves like an inline block element */
+  align-items: center; /* Align text and icon */
+}
+
 .team-list li a {
   margin-left: 10px; /* Space between name and GitHub icon */
 }
@@ -286,7 +298,9 @@ nav ul li img + img {
 .team-list li img {
   width: 20px; /* Set the size of the icon */
   height: 20px; /* Set the size of the icon */
+  vertical-align: middle; /* Align the icon with the middle of the text */
 }
+
 
 
 /*
