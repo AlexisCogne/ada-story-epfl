@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; /* Ensure the title and navigation take up the full width */
   text-align: center; /* Ensure centered text alignment */
   font-family: 'fonttitle', sans-serif; /* Apply the custom font family */
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .masthead-title span {
@@ -205,15 +205,15 @@ nav ul li img + img {
 
 .masthead-title nav ul li a {
   text-decoration: none;
-  color: #15191e; /* Set color for links */
+  color: #ffffff; /* Set color for links */
   font-size: 16px; /* Font size for links */
-  font-weight: bold; /* Bold for better emphasis */
+  font-weight: normal; /* Bold for better emphasis */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .masthead-title nav ul li a:hover {
   text-decoration: underline;
-  color: #ffffff; /* Change color on hover */
+  color: #15191e; /* Change color on hover */
 }
 
 .masthead-title nav ul li a:focus {
