@@ -4,9 +4,11 @@
         <div style="margin-right: 20px;">
             <label for="ligand-selection">Select a ligand:</label>
             <select id="ligand-selection">
-                <option value="ligand_1">Ligand #1</option>
-                <option value="ligand_2">Ligand #2</option>
-                <option value="ligand_3">Ligand #3</option>
+                <option value="ligand_0">Ligand #1</option>
+                <option value="ligand_1">Ligand #2</option>
+                <option value="ligand_2">Ligand #3</option>
+                <option value="ligand_3">Ligand #4</option>
+                <option value="ligand_4">Ligand #5</option>
             </select>
         </div>
 
@@ -14,7 +16,7 @@
         <div style="flex-grow: 1; text-align: center;">
             <iframe 
                 id="structure-display" 
-                src="public/assets/ligand_representation/structure_ligand_1.html" 
+                src="public/assets/ligand-3d-structure/ligand_0.html" 
                 width="80%" 
                 height="500" 
                 style="border: none;">
@@ -29,6 +31,6 @@
         const iframe = document.getElementById("structure-display");
         
         // Update the iframe source based on the selected ligand
-        iframe.src = `public/assets/ligand_representation/structure_${ligand}.html`;
+        iframe.src = `public/assets/ligand-3d-structure/${ligand}.html`;
     });
 </script>
