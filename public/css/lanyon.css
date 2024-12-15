@@ -177,6 +177,21 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 0; /* Ensure tagline does not stretch */
 }
 
+.masthead-title .site-title-link {
+  text-decoration: none; /* Remove underline by default */
+  color: #ffffff; /* Match navigation link color */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth effects */
+}
+
+.masthead-title .site-title-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #E23E57; /* Match navigation hover color */
+}
+
+.masthead-title .site-title-link:focus {
+  outline: none; /* Remove focus outline */
+  border-bottom: 2px solid #0056b3; /* Add bottom border on focus */
+}
 .masthead-title nav {
   display: flex; /* Align nav links horizontally */
   align-items: center; /* Vertically align items within the nav */

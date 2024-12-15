@@ -1,0 +1,34 @@
+<section id="EGFR-mutants">
+    <!-- Dropdown for selecting a mutant -->
+    <div style="text-align: center; margin-bottom: 10px;">
+        <label for="mutant-selection">Select a mutant:</label>
+        <select id="mutant-selection">
+            <option value="mutant_0">Wild Type</option>
+            <option value="mutant_1">EGFR [1-18,20-1210,C797S]</option>
+            <option value="mutant_2">EGFR [1-18,20-1210,T790M,C797S]</option>
+            <option value="mutant_3">EGFR [1-18,20-1210,T790M]</option>
+            <option value="mutant_4">EGFR [1-18,20-1210]</option>
+        </select>
+    </div>
+
+    <!-- Display for the protein mutant -->
+    <div style="text-align: center;">
+        <iframe 
+            id="mutant-display" 
+            src="public/assets/EGFR_HUMAN/EGFR_HUMAN_mutant_0_viz.html" 
+            width="100%" 
+            height="350" 
+            style="border: none;">
+        </iframe>
+    </div>
+</section>
+
+<script>
+    document.getElementById("mutant-selection").addEventListener("change", function () {
+        const ligand = document.getElementById("mutant-selection").value;
+        const iframe = document.getElementById("mutant-display");
+        
+        // Update the iframe source based on the selected ligand
+        iframe.src = `public/assets/EGFR_HUMAN/EGFR_HUMAN_${ligand}_viz.html`;
+    });
+</script>
