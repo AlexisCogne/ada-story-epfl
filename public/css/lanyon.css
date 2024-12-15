@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead-title .site-title-link:hover {
   text-decoration: underline; /* Add underline on hover */
-  color: #15191e; /* Match navigation hover color */
+  color: #E23E57; /* Match navigation hover color */
 }
 
 .masthead-title .site-title-link:focus {
