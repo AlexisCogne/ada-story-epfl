@@ -764,3 +764,24 @@ a.pagination-item:hover {
 .hidden {
   display: none;
 }
+
+/* embeddings plots */
+#abbigail-plots {
+  text-align: center; /* Center the section title */
+}
+
+.plots-container {
+  display: flex; /* Arrange items in a row */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between plots */
+  margin: 20px auto; /* Add some space around the container */
+  flex-wrap: wrap; /* Wrap images if the screen is too small */
+}
+
+.plot-item img {
+  max-width: 100%; /* Make sure the image scales down */
+  height: auto; /* Keep the aspect ratio */
+  display: block; /* Remove extra space below the image */
+  border: 1px solid #ddd; /* Optional: Add a light border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a slight shadow */
+}
