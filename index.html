@@ -80,7 +80,7 @@ title: Research on Protein Mutations and Ligand Binding
 
   <section id="alignments">
     <h2>Multiple Sequence Alignment (MSA)</h2>
-    <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is <strong>EGFR[1-18,20-1210,C797S]</strong>, where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like <strong>EGFR[1-751,75360-1210]</strong> instead of <strong>EGFR[1-751,760-1210]</strong>) makes this task non-trivial for a computer.</p>
+    <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is EGFR[1-18,20-1210,C797S], where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like EGFR[1-751,75360-1210] instead of EGFR[1-751,760-1210]) makes this task non-trivial for a computer.</p>
 
     <p>To solve this, we turned directly to the protein sequences. Using pairwise alignment with the Needleman-Wunsch algorithm, we compared each mutant sequence to the reference protein. This approach allowed us to identify insertions, deletions, and substitutions, overcoming the ambiguity hidden in the names.</p>
 
@@ -88,12 +88,13 @@ title: Research on Protein Mutations and Ligand Binding
 
     <p>To make the changes stand out, we added color:</p>
     <ul>
-        <li class="highlight-green">Insertions are highlighted in green.</li>
-        <li class="highlight-yellow">Substitutions glow in yellow.</li>
-        <li class="highlight-red">Deletions appear in bold red.</li>
+        <li style="background-color: #d4edda;">Insertions are highlighted in green.</li>
+        <li style="background-color: #fff3cd;">Substitutions glow in yellow.</li>
+        <li style="background-color: #d93e18;">Deletions appear in bold red.</li>
     </ul>
 
     <p>With this alignment, variations against the reference, and patterns across mutants, become instantly visible, offering insights into how these changes might relate to functional outcomes, like shifts in IC50 values.</p>
+
     <iframe
       src="public/assets/alignments.html"
       width="100%"
