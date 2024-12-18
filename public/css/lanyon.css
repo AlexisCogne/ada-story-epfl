@@ -791,3 +791,13 @@ a.pagination-item:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a slight shadow */
 }
 
+
+/* Side by Side 3D visualizations */
+.mutants-container {
+  display: flex; /* Align items side by side */
+  gap: 20px; /* Space between the two sections */
+}
+
+.EGFR-mutant-item, .KAPCA-mutant-item {
+  flex: 1; /* Ensure both items take equal width */
+}
