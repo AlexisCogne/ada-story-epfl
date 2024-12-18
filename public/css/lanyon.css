@@ -806,3 +806,36 @@ a.pagination-item:hover {
 .EGFR-mutant-item, .KAPCA-mutant-item {
   flex: 1; /* Ensure both items take equal width */
 }
+
+/* Tables*/
+/* General table styling */
+table {
+  width: 100%; /* Make the table take the full width of its container */
+  border-collapse: collapse; /* Remove spacing between cells */
+  margin: 20px auto; /* Center the table with auto margins */
+  text-align: center; /* Center-align text in all cells */
+  font-family: Arial, sans-serif; /* Set a clean font */
+}
+
+/* Header row styling */
+th {
+  background-color: #f4f4f4; /* Light gray background for headers */
+  font-size: 18px; /* Increase font size for headers */
+  font-weight: bold; /* Bold font for headers */
+  padding: 10px; /* Add some space inside cells */
+  border: 1px solid #ddd; /* Add a border to the header cells */
+}
+
+/* Data rows styling */
+td {
+  font-size: 16px; /* Standard font size for data */
+  padding: 10px; /* Add some space inside cells */
+  border: 1px solid #ddd; /* Add a border to the data cells */
+  text-align: center; /* Center-align text */
+  word-wrap: break-word; /* Allow wrapping of long text */
+}
+
+/* Alternate row colors for better readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
