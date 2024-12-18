@@ -1,11 +1,11 @@
-<section id="EGFR-mutants">
+<section id="KAPCA-mutants">
     <!-- Dropdown for selecting a mutant -->
     <div style="text-align: center; margin-bottom: 10px;">
         <label for="mutant-selection">Select a mutant:</label>
         <select id="mutant-selection">
             <option value="mutant_0">Wild Type</option>
-            <option value="mutant_11">EGFR [668-1210,T790M,L858R]</option>
-            <option value="mutant_15">EGFR [1-973]</option>
+            <option value="mutant_1">KAPCA [E127D]</option>
+            <option value="mutant_4">KAPCA [L49I,V123M,E127D,Q181K,T183A]</option>
         </select>
     </div>
 
@@ -13,7 +13,7 @@
     <div style="text-align: center;">
         <iframe 
             id="mutant-display" 
-            src="public/assets/EGFR_HUMAN/EGFR_HUMAN_mutant_0_viz.html" 
+            src="public/assets/KAPCA_BOVIN/KAPCA_BOVIN_mutant_0_viz.html" 
             width="100%" 
             height="350" 
             style="border: none;">
@@ -27,6 +27,6 @@
         const iframe = document.getElementById("mutant-display");
         
         // Update the iframe source based on the selected ligand
-        iframe.src = `public/assets/EGFR_HUMAN/EGFR_HUMAN_${ligand}_viz.html`;
+        iframe.src = `public/assets/KAPCA_BOVIN/KAPCA_BOVIN_${ligand}_viz.html`;
     });
 </script>
