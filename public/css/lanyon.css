@@ -837,5 +837,5 @@ td {
 
 /* Alternate row colors for better readability */
 tr:nth-child(even) {
-  background-color: #f9f9f9; /* Light gray for even rows */
+  background-color: #f9f9f9 !important; /* Light gray for even rows */
 }
