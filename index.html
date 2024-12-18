@@ -26,13 +26,13 @@ title: Research on Protein Mutations and Ligand Binding
       <li>Can a low-dimensional space capture meaningful protein-ligand behaviors? E.g., protein embeddings cluster according to their similarity and clusters can be labeled according to their binding affinity with ligand groups.</li>
     </ul>
   </section>
-  
+
   <!-- Part 1: Mutant Analysis -->
   <section id="mutant-analysis">
     <h2>Mutants Analysis</h2>
     <p>
-      Protein mutations are a key component to understand in many biological fields such as drug development. Indeed, mutations can impact how a protein will bind to a given molecule, referred as ligand, and this needs to be taken into account to create drugs that work for a vaste majority of the population for example. Our curiosity about this impact was what initiated our first study. We extracted five high quality “interaction pairs” from BindingDB to display and analyse. An “interaction pair” here refers to a ligand and a group of similar proteins, i.e. a wild-type (WT) protein and its mutants. 
-      
+      Protein mutations are a key component to understand in many biological fields such as drug development. Indeed, mutations can impact how a protein will bind to a given molecule, referred as ligand, and this needs to be taken into account to create drugs that work for a vaste majority of the population for example. Our curiosity about this impact was what initiated our first study. We extracted five high quality “interaction pairs” from BindingDB to display and analyse. An “interaction pair” here refers to a ligand and a group of similar proteins, i.e. a wild-type (WT) protein and its mutants.
+
       It would be too long to analyse in details every single one of those five interactions, so we have decided to focus on one that we found interesting because it includes all kinds of mutations (insertions, deletions, and substitutions). Nevertheless, all plots are available for every interaction pairs and can be displayed by selecting the corresponding dropdown option. Here is a summary of the five interaction pairs.
     </p>
     <!-- Table of Interaction Pairs-->
@@ -80,9 +80,20 @@ title: Research on Protein Mutations and Ligand Binding
 
   <section id="alignments">
     <h2>Multiple Sequence Alignment (MSA)</h2>
-    <p>
-      Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. 
-    </p>
+    <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is <strong>EGFR[1-18,20-1210,C797S]</strong>, where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like <strong>EGFR[1-751,75360-1210]</strong> instead of <strong>EGFR[1-751,760-1210]</strong>) makes this task non-trivial for a computer.</p>
+
+    <p>To solve this, we turned directly to the protein sequences. Using pairwise alignment with the Needleman-Wunsch algorithm, we compared each mutant sequence to the reference protein. This approach allowed us to identify insertions, deletions, and substitutions, overcoming the ambiguity hidden in the names.</p>
+
+    <p>Once the differences were identified, we constructed a Multiple Sequence Alignment (MSA). The result is a clean and intuitive visualization: the reference sequence at the top, mutants neatly aligned below.</p>
+
+    <p>To make the changes stand out, we added color:</p>
+    <ul>
+        <li class="highlight-green">Insertions are highlighted in green.</li>
+        <li class="highlight-yellow">Substitutions glow in yellow.</li>
+        <li class="highlight-red">Deletions appear in bold red.</li>
+    </ul>
+
+    <p>With this alignment, variations against the reference, and patterns across mutants, become instantly visible, offering insights into how these changes might relate to functional outcomes, like shifts in IC50 values.</p>
     <iframe
       src="public/assets/alignments.html"
       width="100%"
@@ -94,13 +105,13 @@ title: Research on Protein Mutations and Ligand Binding
   <section id="ic50-scatter">
     <h2>Scatter Plot IC50</h2>
     <p>
-      To visualize the impact of specific mutations on binding affinity, we decided to first use scatter plots for a given interaction pair Wild-Type protein - Ligand. To assess the impact on binding affinity we look at the log ratio of IC50 values between the WT and the mutant. IC50 is a measure that indicates how much of a given ligand is needed to inhibit, in vitro, a given biological process or biological component by 50%. This value was present in the majority of experiments included in BindingDB and this is why it was used as a measure of binding affinity in our project. Given the range of values in the dataset, using the log ratio was the best way to visualize the results that can be interpreted as such: a positive value means a decreased binding affinity and a negative value means an increased binding affinity. 
-      <br> Many information can be found on the plot such as the position of the mutation on the amino acid sequence (x-axis) as well as complementary information like the name of the mutant and the type of mutation that can be found by going over certain points on the plot using the user’s computer mouse. This interactive plot allows the user to zoom in certain parts of the sequence, to keep only specific mutants, and many more features that we hope the user will discover and play with. 
-      <br>The second plot below the one just described is very similar but is colored in a different way. Color is used in the first plot to identify all mutations that are in the same mutant, but it is used in the second plot to visualize the difference in ESM2 probability. ESM2 is a masked language model that can be used to predict the probability of having a specific amino acid at a given position on a target sequence. It is thus interesting to compare the “likelihood” of the mutated amino acid versus the WT amino acid for a given substitution. This process can not be done for deletions and insertions since ESM2 is trained only to predict amino acids for a fixed length sequence. Since probabilities are between 0 and 1 by definition, the difference of the mutated one minus the WT one is bound between -1 and 1. A difference of -1 indicates that ESM2 is absolutely sure that the WT amino acid needs to be at the given position for the protein and correspondingly, a difference of +1 indicates that ESM2 is very confident about placing the mutated amino acid at the given position. The two scatter plots are after another to allow a better transition between both during analysis. As for the first plot, the user can use the computer mouse to go over points on the plot to learn more about the mutation. 
+      To visualize the impact of specific mutations on binding affinity, we decided to first use scatter plots for a given interaction pair Wild-Type protein - Ligand. To assess the impact on binding affinity we look at the log ratio of IC50 values between the WT and the mutant. IC50 is a measure that indicates how much of a given ligand is needed to inhibit, in vitro, a given biological process or biological component by 50%. This value was present in the majority of experiments included in BindingDB and this is why it was used as a measure of binding affinity in our project. Given the range of values in the dataset, using the log ratio was the best way to visualize the results that can be interpreted as such: a positive value means a decreased binding affinity and a negative value means an increased binding affinity.
+      <br> Many information can be found on the plot such as the position of the mutation on the amino acid sequence (x-axis) as well as complementary information like the name of the mutant and the type of mutation that can be found by going over certain points on the plot using the user’s computer mouse. This interactive plot allows the user to zoom in certain parts of the sequence, to keep only specific mutants, and many more features that we hope the user will discover and play with.
+      <br>The second plot below the one just described is very similar but is colored in a different way. Color is used in the first plot to identify all mutations that are in the same mutant, but it is used in the second plot to visualize the difference in ESM2 probability. ESM2 is a masked language model that can be used to predict the probability of having a specific amino acid at a given position on a target sequence. It is thus interesting to compare the “likelihood” of the mutated amino acid versus the WT amino acid for a given substitution. This process can not be done for deletions and insertions since ESM2 is trained only to predict amino acids for a fixed length sequence. Since probabilities are between 0 and 1 by definition, the difference of the mutated one minus the WT one is bound between -1 and 1. A difference of -1 indicates that ESM2 is absolutely sure that the WT amino acid needs to be at the given position for the protein and correspondingly, a difference of +1 indicates that ESM2 is very confident about placing the mutated amino acid at the given position. The two scatter plots are after another to allow a better transition between both during analysis. As for the first plot, the user can use the computer mouse to go over points on the plot to learn more about the mutation.
     </p>
     <iframe src="public/assets/interactive_ic50_plot_18_12.html" width="120%" height="720" style="border:none;"></iframe>
     <p>
-      Many interesting things are found on these two plots. We see that the two first mutants ([1-18,20-1210,C797S], [1-18,20-1210,T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18,20-1210,T790M], [1-18,20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]). 
+      Many interesting things are found on these two plots. We see that the two first mutants ([1-18,20-1210,C797S], [1-18,20-1210,T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18,20-1210,T790M], [1-18,20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).
       <br> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results.
       <br> Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).
       <br> Regarding the second plot, there are three mutations on this plot:
@@ -136,7 +147,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
         <ul>
           <li> position 790 is not important or not involved in the binding of the protein EGFR (and its mutants) with ligand 1</li>
           <li> the mutation T790M reduces the binding affinity with ligand 2 and ligand 3 </li>
-        </ul>Position 790 is not important or not involved in the binding of the protein EGFR (and its mutants) with ligand 1 
+        </ul>Position 790 is not important or not involved in the binding of the protein EGFR (and its mutants) with ligand 1
 
       <br> Similarly, for the two last mutants shown on the right plot we see a big difference on the log ratio even though there is only one different mutation. We can thus make multiple hypothesis such as:
         <li> position 183 is important or involved in the binding of the protein KAPCA (and its mutants) with both ligand 4 and 5</li>
@@ -179,7 +190,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
   <section id="riccardo">
     <h2>Riccardo's plot</h2>
     <p>
-      Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. 
+      Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code.
     </p>
     <iframe src="public/assets/embeddings/3d_combined_clustering_plot.html" width="100%" height="500" style="border:none;"></iframe>
   </section>
@@ -187,7 +198,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
   <section id="abbigail-plots">
     <h2>Abbigail's Plots #4 and #5</h2>
     <p>
-      Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. 
+      Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code.
     </p>
     <div class="plots-container">
       <!-- First Plot -->
@@ -201,7 +212,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
     </div>
   </section>
 
-  
+
 
   <section id="expected-results">
     <h2>Expected Results</h2>
