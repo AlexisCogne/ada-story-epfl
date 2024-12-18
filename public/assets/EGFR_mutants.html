@@ -1,8 +1,8 @@
 <section id="EGFR-mutants">
     <!-- Dropdown for selecting a mutant -->
     <div style="text-align: center; margin-bottom: 10px;">
-        <label for="mutant-selection">Select a mutant:</label>
-        <select id="mutant-selection">
+        <label for="egfr-mutant-selection">Select a mutant:</label>
+        <select id="egfr-mutant-selection">
             <option value="mutant_0">Wild Type</option>
             <option value="mutant_11">EGFR [668-1210,T790M,L858R]</option>
             <option value="mutant_15">EGFR [1-973]</option>
@@ -12,7 +12,7 @@
     <!-- Display for the protein mutant -->
     <div style="text-align: center;">
         <iframe 
-            id="mutant-display" 
+            id="egfr-mutant-display" 
             src="public/assets/EGFR_HUMAN/EGFR_HUMAN_mutant_0_viz.html" 
             width="100%" 
             height="350" 
@@ -22,9 +22,9 @@
 </section>
 
 <script>
-    document.getElementById("mutant-selection").addEventListener("change", function () {
-        const ligand = document.getElementById("mutant-selection").value;
-        const iframe = document.getElementById("mutant-display");
+    document.getElementById("egfr-mutant-selection").addEventListener("change", function () {
+        const ligand = document.getElementById("egfr-mutant-selection").value;
+        const iframe = document.getElementById("egfr-mutant-display");
         
         // Update the iframe source based on the selected ligand
         iframe.src = `public/assets/EGFR_HUMAN/EGFR_HUMAN_${ligand}_viz.html`;
