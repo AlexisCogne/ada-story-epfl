@@ -807,7 +807,6 @@ a.pagination-item:hover {
   flex: 1; /* Ensure both items take equal width */
 }
 
-/* Tables*/
 /* General table styling */
 table {
   width: 100%; /* Make the table take the full width of its container */
@@ -835,7 +834,16 @@ td {
   word-wrap: break-word; /* Allow wrapping of long text */
 }
 
-/* Alternate row colors for better readability */
+/* Adjust font size for the second column */
+td:nth-child(2) {
+  font-size: 14px; /* Slightly smaller font size */
+}
+
+/* Alternate row colors */
 tr:nth-child(even) {
-  background-color: #f9f9f9 !important; /* Light gray for even rows */
+  background-color: #ffffff !important; /* Ensure even rows are white */
+}
+
+tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray for odd rows */
 }
