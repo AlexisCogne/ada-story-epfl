@@ -26,52 +26,61 @@ title: Research on Protein Mutations and Ligand Binding
       <li>Can a low-dimensional space capture meaningful protein-ligand behaviors? E.g., protein embeddings cluster according to their similarity and clusters can be labeled according to their binding affinity with ligand groups.</li>
     </ul>
   </section>
-
-  <section id="methodology">
-    <h2>Methodology</h2>
+  
+  <!-- Part 1: Mutant Analysis -->
+  <section id="mutant-analysis">
+    <h2>Mutants Analysis</h2>
     <p>
       To tackle these questions, we will use a multi-step approach. First, we will align mutated protein sequences to reference proteins to identify the mutation positions and types. We will then visualize the mutation sites using IC50 values and additional mutation characteristics, such as probability and chemical properties. For the development of a ligand search tool, we will leverage protein embeddings in Euclidean space, which will help in clustering ligands based on protein similarity. The classifier we develop will predict ligand groups by using protein sequence embeddings and ligand clusters.
     </p>
+    <!-- Table of Interaction Pairs-->
+    <table>
+      <tr>
+          <th>Interaction Pair</th>
+          <th>Ligand Name</th>
+          <th>WT Protein</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>N-[7-chloro-1-[(3R)-1-[(E)-4-(dimethylamino)but-2-enoyl]azepan-3-yl]benzimidazol-2-yl]-2-methylpyridine-4-carboxamide</td>
+          <td>EGFR_HUMAN</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>(E)-N-[4-(3-chloro-4-fluoroanilino)-7-[(3S)-oxolan-3-yl]oxyquinazolin-6-yl]-4-(dimethylamino)but-2-enamide</td>
+          <td>EGFR_HUMAN</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>N-(3-chloro-4-fluorophenyl)-7-methoxy-6-(3-morpholin-4-ylpropoxy)quinazolin-4-amine</td>
+          <td>EGFR_HUMAN</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>4-[(1R)-1-aminoethyl]-N-pyridin-4-ylcyclohexane-1-carboxamide</td>
+          <td>KAPCA_BOVIN</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>4-methyl-5-[[(2S)-2-methyl-1,4-diazepan-1-yl]sulfonyl]isoquinoline</td>
+          <td>KAPCA_BOVIN</td>
+      </tr>
+    </table>
   </section>
 
-  <section id="ligand-representation-3">
-    <h2>Tancredi Test 3: 14 decembre</h2>
+  <section id="alignments">
+    <h2>Multiple Sequence Alignment (MSA)</h2>
+    <iframe
+      src="public/assets/alignments.html"
+      width="100%"
+      style="border: none"
+    ></iframe>
+  </section>
+
+  <section id="ic50-scatter">
+    <h2>Scatter Plot IC50</h2>
     <iframe src="public/assets/interactive_ic50_plot_14_12_24.html" width="120%" height="720" style="border:none;"></iframe>
   </section>
-
-  <!-- Table of Interaction Pairs-->
-  <table>
-    <tr>
-        <th>Interaction Pair</th>
-        <th>Ligand Name</th>
-        <th>WT Protein</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>N-[7-chloro-1-[(3R)-1-[(E)-4-(dimethylamino)but-2-enoyl]azepan-3-yl]benzimidazol-2-yl]-2-methylpyridine-4-carboxamide</td>
-        <td>EGFR_HUMAN</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>(E)-N-[4-(3-chloro-4-fluoroanilino)-7-[(3S)-oxolan-3-yl]oxyquinazolin-6-yl]-4-(dimethylamino)but-2-enamide</td>
-        <td>EGFR_HUMAN</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>N-(3-chloro-4-fluorophenyl)-7-methoxy-6-(3-morpholin-4-ylpropoxy)quinazolin-4-amine</td>
-        <td>EGFR_HUMAN</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>4-[(1R)-1-aminoethyl]-N-pyridin-4-ylcyclohexane-1-carboxamide</td>
-        <td>KAPCA_BOVIN</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>4-methyl-5-[[(2S)-2-methyl-1,4-diazepan-1-yl]sulfonyl]isoquinoline</td>
-        <td>KAPCA_BOVIN</td>
-    </tr>
-  </table>
 
   <section id="barplot-IC50">
     <h2>Barplots IC50</h2>
@@ -87,15 +96,31 @@ title: Research on Protein Mutations and Ligand Binding
     </div>
   </section>
 
-  <section id="alignments">
-    <h2>Viola :) Test 3: 14 decembre</h2>
-    <iframe
-      src="public/assets/alignments.html"
-      width="100%"
-      height="720"
-      style="border: none"
-    ></iframe>
+  <!-- 3D Protein Structures -->
+  <section id="side-mutants-plot">
+    <h2>Visualization of 3D structures of EGFR & KAPCA WTs and Mutants</h2>
+    <div class="mutants-container">
+      <!-- First Mutant Dropdown and Plot -->
+      <div class="EGFR-mutant-item">
+        {% include_relative public/assets/EGFR_mutants.html %}
+      </div>
+      <!-- Second Mutant Dropdown and Plot -->
+      <div class="KAPCA-mutant-item">
+        {% include_relative public/assets/KAPCA_mutants.html %}
+      </div>
+    </div>
   </section>
+
+  <!-- Visualisation of Ligands' 3D Structure -->
+  <section id="3d-plot-ligand">
+    <h2>Visualisation of Ligands' 3D Structure</h2>
+    {% include_relative public/assets/ligand_representation_uni-box.html %}
+  </section>
+
+  <!-- Vertical Line-->
+  <hr>
+
+  <!-- Part 2-->
 
   <section id="riccardo">
     <h2>Riccardo's plot</h2>
@@ -116,30 +141,12 @@ title: Research on Protein Mutations and Ligand Binding
     </div>
   </section>
 
-  <section id="3d-plot-dropdown">
-    <h2>3D Structure Plot Dropdown</h2>
-    {% include_relative public/assets/ligand_representation_uni-box.html %}
-  </section>
+  
 
   <section id="expected-results">
     <h2>Expected Results</h2>
     <p>
       We expect to identify key mutation sites that significantly affect ligand binding affinity and demonstrate the utility of protein embeddings in classifying ligands based on their interaction patterns. The classifier trained on these embeddings should be able to predict ligand groups for new protein sequences effectively, making the ligand search process faster and more accurate.
     </p>
-  </section>
-
-
-  <section id="side-mutants-plot">
-    <h2>Visualization of 3D structures of EGFR & KAPCA WTs and Mutants</h2>
-    <div class="mutants-container">
-      <!-- First Mutant Dropdown and Plot -->
-      <div class="EGFR-mutant-item">
-        {% include_relative public/assets/EGFR_mutants.html %}
-      </div>
-      <!-- Second Mutant Dropdown and Plot -->
-      <div class="KAPCA-mutant-item">
-        {% include_relative public/assets/KAPCA_mutants.html %}
-      </div>
-    </div>
   </section>
 </div>
