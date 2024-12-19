@@ -101,34 +101,30 @@ title: Research on Protein Mutations and Ligand Binding
   </section>
 
   <section id="ic50-scatter">
-    <h3>Scatter Plot IC50</h3>
-    <p>
-      To visualize the impact of specific mutations on binding affinity, we decided to first use scatter plots for a given interaction pair Wild-Type protein - Ligand. To assess the impact on binding affinity we look at the log ratio of IC50 values between the WT and the mutant. IC50 is a measure that indicates how much of a given ligand is needed to inhibit, in vitro, a given biological process or biological component by 50%. This value was present in the majority of experiments included in BindingDB and this is why it was used as a measure of binding affinity in our project. Given the range of values in the dataset, using the log ratio was the best way to visualize the results that can be interpreted as such: a positive value means a decreased binding affinity and a negative value means an increased binding affinity.
-      <br> Many information can be found on the plot such as the position of the mutation on the amino acid sequence (x-axis) as well as complementary information like the name of the mutant and the type of mutation that can be found by going over certain points on the plot using the user’s computer mouse. This interactive plot allows the user to zoom in certain parts of the sequence, to keep only specific mutants, and many more features that we hope the user will discover and play with.
-      <br>The second plot below the one just described is very similar but is colored in a different way. Color is used in the first plot to identify all mutations that are in the same mutant, but it is used in the second plot to visualize the difference in ESM2 probability. ESM2 is a masked language model that can be used to predict the probability of having a specific amino acid at a given position on a target sequence. It is thus interesting to compare the “likelihood” of the mutated amino acid versus the WT amino acid for a given substitution. This process can not be done for deletions and insertions since ESM2 is trained specifically to predict amino acids at masked positions. Since probabilities are between 0 and 1 by definition, the difference of the mutated one minus the WT one is bound between -1 and 1. A difference of -1 indicates that ESM2 is absolutely sure that the WT amino acid needs to be at the given position for the protein and correspondingly, a difference of +1 indicates that ESM2 is very confident about placing the mutated amino acid at the given position. The two scatter plots are after another to allow a better transition between both during analysis. As for the first plot, the user can use the computer mouse to go over points on the plot to learn more about the mutation.
-    </p>
+    <h3>Impact of mutations on binding affinity</h3>
+    <p>To visualize the impact of specific mutations on binding affinity, we decided to first use scatter plots for a given interaction pair Wild-Type protein - Ligand. To assess the impact on binding affinity we look at the log ratio of IC50 values between the WT and the mutant. IC50 is a measure that indicates how much of a given ligand is needed to inhibit, in vitro, a given biological process or biological component by 50%. This value was present in the majority of experiments included in BindingDB and this is why it was used as a measure of binding affinity in our project. Given the range of values in the dataset, using the log ratio was the best way to visualize the results that can be interpreted as such: a positive value means a decreased binding affinity and a negative value means an increased binding affinity.</p>
+    <p>Many information can be found on the plot such as the position of the mutation on the amino acid sequence (x-axis) as well as complementary information like the name of the mutant and the type of mutation that can be found by going over certain points on the plot using the user’s computer mouse. This interactive plot allows the user to zoom in certain parts of the sequence, to keep only specific mutants, and many more features that we hope the user will discover and play with.</p>
+    <p>The second plot below the one just described is very similar but is colored in a different way. Color is used in the first plot to identify all mutations that are in the same mutant, but it is used in the second plot to visualize the difference in ESM2 probability. ESM2 is a masked language model that can be used to predict the probability of having a specific amino acid at a given position on a target sequence. It is thus interesting to compare the “likelihood” of the mutated amino acid versus the WT amino acid for a given substitution. This process can not be done for deletions and insertions since ESM2 is trained specifically to predict amino acids at masked positions. Since probabilities are between 0 and 1 by definition, the difference of the mutated one minus the WT one is bound between -1 and 1. A difference of -1 indicates that ESM2 is absolutely sure that the WT amino acid needs to be at the given position for the protein and correspondingly, a difference of +1 indicates that ESM2 is very confident about placing the mutated amino acid at the given position. The two scatter plots are after another to allow a better transition between both during analysis. As for the first plot, the user can use the computer mouse to go over points on the plot to learn more about the mutation.</p>
+    
     <iframe src="public/assets/interactive_ic50_plot_18_12.html" width="120%" height="720" style="border:none;"></iframe>
-    <p>
-      Many interesting things are found on these two plots. We see that the two first mutants ([1-18,20-1210,C797S], [1-18,20-1210,T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18,20-1210,T790M], [1-18,20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).
-      <br> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results.
-      <br> Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).
-      <br> Regarding the second plot, there are three mutations on this plot:
+    
+    <p>Many interesting things are found on these two plots. We see that the two first mutants ([1-18,20-1210,C797S], [1-18,20-1210,T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18,20-1210,T790M], [1-18,20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).</p>
+    <p> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results.</p>
+    <p> Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).</p>
+    <p> Regarding the second plot, there are three mutations on this plot:</p>
       <ul>
         <li>mutation at position 790 from Threonine to Methionine: the probability difference is around -0.2 meaning Threonine is more probable than Methionine according to ESM2. The difference being small, it is hard to draw any conclusions but the negative sign still indicates a similar idea as our previous plot in which we said that T790M was non-beneficial</li>
         <li>mutation at position 797 from Cysteine to Serine: the probability difference is around +0.3 indicating that Serine is more likely to be at that position compared to Cysteine according to ESM2</li>
         <li>mutation at position 858 from Leucine to Arginine: the probability difference is around -0.8 which strongly indicates that Leucine is more likely to be at that position compared to Arginine. This is partially in contradiction with our previous analysis that stated that this mutation was beneficial</li>
       </ul>
-      <br> Overall, as we will see in our other analysis, binding affinity is not properly captured by ESM2 and these results should be taken with a grain of salt.
-    </p>
+    <p> Overall, as we will see in our other analysis, binding affinity is not properly captured by ESM2 and these results should be taken with a grain of salt.</p>
   </section>
 
   <section id="barplot-IC50">
-    <h3>Barplots IC50</h3>
-    <p>
-      So far, we looked at a given interaction pair Ligand - WT protein and looked at the impact of mutants of that WT protein on binding affinity. Luckily, in the five selected pairs, there are only two WT proteins: EGFR_HUMAN and KAPCA_BOVIN. An interesting study consists of inverting the point of view and trying to understand the impact of the ligand on the binding affinity for a given pair WT protein - Mutant. To do this, we collected the data for the five interaction pairs.
+    <h3>Impact of ligands on binding affinity</h3>
+    <p>So far, we looked at a given interaction pair Ligand - WT protein and looked at the impact of mutants of that WT protein on binding affinity. Luckily, in the five selected pairs, there are only two WT proteins: EGFR_HUMAN and KAPCA_BOVIN. An interesting study consists of inverting the point of view and trying to understand the impact of the ligand on the binding affinity for a given pair WT protein - Mutant. To do this, we collected the data for the five interaction pairs.</p>
+    <p>To visualize this, we produced two bar plots, one for each WT protein. The bar plots shows once again the log ratio of IC50 values and each group of bars represents this value for a given WT/mutant pair. The different colors represent the ligand associated with a given value.</p>
 
-To visualize this, we produced two bar plots, one for each WT protein. The bar plots shows once again the log ratio of IC50 values and each group of bars represents this value for a given WT/mutant pair. The different colors represent the ligand associated with a given value.
-    </p>
     <div class="plots-container">
       <!-- First Plot -->
       <div class="plot-item">
@@ -139,18 +135,17 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
         <img src="public/assets/KAPCA_BOVIN/barplot_KAPCA_BOVIN.png" alt="Barplot KAPCA">
       </div>
     </div>
-    <p>
-      The goal was to see if any clear trends arose from the plot. Logically, this is not the case, since binding affinity depends on many components and not only the properties of the ligand.
-      <br> Still, for the two last mutants shown on the left plot we observe two very different patterns even though there is only one different mutation. We can thus make multiple hypothesis such as:
+    <p>The goal was to see if any clear trends arose from the plot. Logically, this is not the case, since binding affinity depends on many components and not only the properties of the ligand.</p>
+    <p>Still, for the two last mutants shown on the left plot we observe two very different patterns even though there is only one different mutation. We can thus make multiple hypothesis such as:</p>
         <ul>
           <li> position 790 is not important or not involved in the binding of the protein EGFR (and its mutants) with ligand 1</li>
           <li> the mutation T790M reduces the binding affinity with ligand 2 and ligand 3 </li>
-        </ul>Position 790 is not important or not involved in the binding of the protein EGFR (and its mutants) with ligand 1
-
-      <br> Similarly, for the two last mutants shown on the right plot we see a big difference on the log ratio even though there is only one different mutation. We can thus make multiple hypothesis such as:
-        <li> position 183 is important or involved in the binding of the protein KAPCA (and its mutants) with both ligand 4 and 5</li>
-        <li> the mutation T183A reduces the binding affinity with ligand 4 and 5</li>
-    </p>
+        </ul>
+    <p>Similarly, for the two last mutants shown on the right plot we see a big difference on the log ratio even though there is only one different mutation. We can thus make multiple hypothesis such as:</p>
+        <ul>    
+          <li> position 183 is important or involved in the binding of the protein KAPCA (and its mutants) with both ligand 4 and 5</li>
+          <li> the mutation T183A reduces the binding affinity with ligand 4 and 5</li>
+        </ul>
   </section>
 
   <!-- 3D Protein Structures -->
