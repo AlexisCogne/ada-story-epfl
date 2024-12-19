@@ -734,11 +734,6 @@ a.pagination-item:hover {
 }
 
 /* embeddings plots */
-#abbigail-plots {
-  text-align: center; /* Center the section title */
-  margin: 0 auto; /* Center the whole section */
-}
-
 .plots-container {
   display: flex;
   justify-content: center;
@@ -814,4 +809,9 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+/* Add scroll margin to all sections when navigating with the links*/
+section {
+  scroll-margin-top: 60px; /* Adjust this value to match your header or top margin height */
 }
