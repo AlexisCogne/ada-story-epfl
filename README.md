@@ -1,6 +1,6 @@
 # Github Repository of the DataStory for the CS-401 ADA Project
 
-## Project: 
+## Team Abrac-Adabra 
 - **Title** *Mutation-driven insights into protein structure and ligand group prediction through protein and ligand embeddings* <br />
 - **Repository** The project repository can be found <a href="[https://readme.com/](https://github.com/epfl-ada/ada-2024-project-abrac-adabra/tree/main)" target="_blank">[here]</a>
 <img width="852" alt="image" src="https://github.com/user-attachments/assets/1c8cf589-2018-486b-b2b5-75c11dbfebe4" />
