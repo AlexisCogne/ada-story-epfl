@@ -103,39 +103,7 @@ h1, h2, h3, h4, h5, h6 {
  * Masthead
  *
  * Super small header above the content for site name and short description.
- 
-
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
-}
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
-}
-
-@media (max-width: 48em) {
-  .masthead-title {
-    text-align: center;
-  }
-  .masthead-title small {
-    display: none;
-  }
-}
 */
-/* Masthead */
 .masthead {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -185,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead-title .site-title-link:hover {
   text-decoration: underline; /* Add underline on hover */
-  color: #E23E57; /* Match navigation hover color */
+  color: #ffffff; /* Hover color - keep white */
 }
 
 .masthead-title .site-title-link:focus {
@@ -754,7 +722,7 @@ a.pagination-item:hover {
 /* Ensures the ligand representation section takes full width */
 #ligand-representation {
   width: 100%;  /* Ensures the section uses the full width of its parent container */
-  max-width: 100%; /* Optional: Prevents any parent element from limiting the width */
+  max-width: 100%; /* Prevents any parent element from limiting the width */
 }
 /* Ensures the plot containers (divs) take full width */
 .similarity-graph {

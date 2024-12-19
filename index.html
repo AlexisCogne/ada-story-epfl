@@ -10,15 +10,8 @@ title: Research on Protein Mutations and Ligand Binding
 
   </header>
 
-  <section id="abstract">
-    <h2>Abstract</h2>
-    <p>
-      This project investigates how mutations in protein sequences affect ligand binding affinities, focusing on reference-mutant groups with a shared ligand. To identify mutation positions and types, we will use an alignment method that compares each mutated sequence to a reference. Potential key domains within the reference protein can be highlighted by plotting IC50 values against mutation positions and incorporating additional data on mutation characteristics, such as occurrence probability and chemical properties. Additionally, we aim to develop a tool that assists researchers in fastening their ligand search when working with a new protein, replacing the usual resource-intensive, blind search with a protein-specific approach. To simplify the computation of protein similarity, we will embed proteins into a Euclidean space using a language model. Using their best-binding ligands as a label and after clustering ligands into coarse groups, we will train a classifier to output a potential ligand group given a protein sequence.
-    </p>
-  </section>
-
-  <section id="research-questions">
-    <h2>Research Questions</h2>
+  <section id="introduction">
+    <h2>Introduction</h2>
     <ul>
       <li>How do mutations in reference-mutant protein groups affect binding affinities with specific ligands?</li>
       <li>Can we identify key mutation sites that alter binding affinity?</li>
@@ -79,7 +72,7 @@ title: Research on Protein Mutations and Ligand Binding
   </section>
 
   <section id="alignments">
-    <h2>Multiple Sequence Alignment (MSA)</h2>
+    <h3>Multiple Sequence Alignment (MSA)</h3>
     <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is EGFR[1-18,20-1210,C797S], where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like EGFR[1-751,75360-1210] instead of EGFR[1-751,760-1210]) makes this task non-trivial for a computer.</p>
 
     <p>To solve this, we turned directly to the protein sequences. Using pairwise alignment with the Needleman-Wunsch algorithm, we compared each mutant sequence to the reference protein. This approach allowed us to identify insertions, deletions, and substitutions, overcoming the ambiguity hidden in the names.</p>
@@ -104,7 +97,7 @@ title: Research on Protein Mutations and Ligand Binding
   </section>
 
   <section id="ic50-scatter">
-    <h2>Scatter Plot IC50</h2>
+    <h3>Scatter Plot IC50</h3>
     <p>
       To visualize the impact of specific mutations on binding affinity, we decided to first use scatter plots for a given interaction pair Wild-Type protein - Ligand. To assess the impact on binding affinity we look at the log ratio of IC50 values between the WT and the mutant. IC50 is a measure that indicates how much of a given ligand is needed to inhibit, in vitro, a given biological process or biological component by 50%. This value was present in the majority of experiments included in BindingDB and this is why it was used as a measure of binding affinity in our project. Given the range of values in the dataset, using the log ratio was the best way to visualize the results that can be interpreted as such: a positive value means a decreased binding affinity and a negative value means an increased binding affinity.
       <br> Many information can be found on the plot such as the position of the mutation on the amino acid sequence (x-axis) as well as complementary information like the name of the mutant and the type of mutation that can be found by going over certain points on the plot using the user’s computer mouse. This interactive plot allows the user to zoom in certain parts of the sequence, to keep only specific mutants, and many more features that we hope the user will discover and play with.
@@ -126,7 +119,7 @@ title: Research on Protein Mutations and Ligand Binding
   </section>
 
   <section id="barplot-IC50">
-    <h2>Barplots IC50</h2>
+    <h3>Barplots IC50</h3>
     <p>
       So far, we looked at a given interaction pair Ligand - WT protein and looked at the impact of mutants of that WT protein on binding affinity. Luckily, in the five selected pairs, there are only two WT proteins: EGFR_HUMAN and KAPCA_BOVIN. An interesting study consists of inverting the point of view and trying to understand the impact of the ligand on the binding affinity for a given pair WT protein - Mutant. To do this, we collected the data for the five interaction pairs.
 
@@ -158,7 +151,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
 
   <!-- 3D Protein Structures -->
   <section id="side-mutants-plot">
-    <h2>Visualization of 3D structures of EGFR & KAPCA WTs and Mutants</h2>
+    <h3>Visualization of 3D structures of EGFR & KAPCA WTs and Mutants</h3>
     <p>
       We have shown many plots and values to talk about the impact of modifications of the structure of proteins on binding affinity and we wanted to also display the actual 3D structure of some of these proteins. The next interactive plots allow the user to visualize what some of the proteins look like. The WT protein is shown for both EGFR and KAPCA and two interesting mutants in both cases are displayed. For the mutants, grey parts represent deletions, and green spheres represent substitutions. Interestingly, we see that all the mutations are located in a similar subspace for the mutant KAPCA [L49I, V123M, E127D, Q181K, T183A], and a further analysis could look at the importance of this part of the structure for binding affinity.
      </p>
@@ -176,7 +169,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
 
   <!-- Visualisation of Ligands' 3D Structure -->
   <section id="3d-plot-ligand">
-    <h2>Visualisation of Ligands' 3D Structure</h2>
+    <h3>Visualisation of Ligands' 3D Structure</h3>
     <p>
       For completeness, we have decided to also include the 3D visualization of the ligands. We hinted at the importance of the ligand in binding affinity even though we mostly focused on the importance of the protein, and another interesting project (maybe for next year ADA students) would be to investigate the structure of ligands in more details.
     </p>
@@ -188,8 +181,8 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
 
   <!-- Part 2-->
 
-  <section id="riccardo">
-    <h2>Riccardo's plot</h2>
+  <section id="embeddings-analysis">
+    <h2>Embeddings Analysis</h2>
     <p>
       Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code.
     </p>
@@ -197,7 +190,7 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
   </section>
 
   <section id="abbigail-plots">
-    <h2>Abbigail's Plots #4 and #5</h2>
+    <h3>Abbigail's Plots #4 and #5</h3>
     <p>
       Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code. Fill in your text here and organize the index.html code.
     </p>
@@ -215,8 +208,8 @@ To visualize this, we produced two bar plots, one for each WT protein. The bar p
 
 
 
-  <section id="expected-results">
-    <h2>Expected Results</h2>
+  <section id="conclusion">
+    <h2>Conclusion</h2>
     <p>
       We expect to identify key mutation sites that significantly affect ligand binding affinity and demonstrate the utility of protein embeddings in classifying ligands based on their interaction patterns. The classifier trained on these embeddings should be able to predict ligand groups for new protein sequences effectively, making the ligand search process faster and more accurate.
     </p>
