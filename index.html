@@ -68,15 +68,15 @@ title: Research on Protein Mutations and Ligand Binding
       We briefly explain here the notation used to describe mutations. There are three types of mutations:
       <ul>
         <li> A substitution is a mutation that changes the type of amino acid at a given position. For example, T790M means that at position 790 on the target sequence, the amino acid Threonine was mutated to Methionine</li>
-        <li> A deletion is a mutation that shortens the length of the protein. For example, [30-120] means that the protein was truncated and only the sequence from amino acid 30 to 120 remain. A deletion of a single amino acid at position 19 would be indicated by [1-18,20-120]</li>
-        <li> An insertion is a mutation that makes the protein longer by introducing amino acids. [1-769, ASV, 770-1210] means that three amino acids were inserted between amino acid at position 769 and amino acid at position 770, respectively Alanine, Serine, and Valine</li>
+        <li> A deletion is a mutation that shortens the length of the protein. For example, [30-120] means that the protein was truncated and only the sequence from amino acid 30 to 120 remain. A deletion of a single amino acid at position 19 would be indicated by [1-18, 20-120]</li>
+        <li> An insertion is a mutation that makes the protein longer by introducing amino acids. [1-769, ASV,770-1210] means that three amino acids were inserted between amino acid at position 769 and amino acid at position 770, respectively Alanine, Serine, and Valine</li>
       </ul>
     </p>
   </section>
 
   <section id="alignments">
     <h3>Multiple Sequence Alignment (MSA)</h3>
-    <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is EGFR[1-18,20-1210,C797S], where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like EGFR[1-751,75360-1210] instead of EGFR[1-751,760-1210]) makes this task non-trivial for a computer.</p>
+    <p>At first sight, identifying mutations from protein names might seem straightforward if you’re human. An example is EGFR[1-18, 20-1210, C797S], where there is a deletion at position 19 and a substitution at position 797 from Cysteine to Serine. However, inconsistent formatting, different brackets, notations, or errors (like EGFR[1-751, 75360-1210] instead of EGFR[1-751, 760-1210]) makes this task non-trivial for a computer.</p>
 
     <p>To solve this, we turned directly to the protein sequences. Using pairwise alignment with the Needleman-Wunsch algorithm, we compared each mutant sequence to the reference protein. This approach allowed us to identify insertions, deletions, and substitutions, overcoming the ambiguity hidden in the names.</p>
 
@@ -95,7 +95,7 @@ title: Research on Protein Mutations and Ligand Binding
     <iframe
       src="public/assets/alignments.html"
       width="100%"
-      height="300"
+      height="270"
       style="border: none"
     ></iframe>
   </section>
@@ -108,7 +108,7 @@ title: Research on Protein Mutations and Ligand Binding
     
     <iframe src="public/assets/interactive_ic50_plot_18_12.html" width="120%" height="720" style="border:none;"></iframe>
     
-    <p>Many interesting things are found on these two plots. We see that the two first mutants ([1-18,20-1210,C797S], [1-18,20-1210,T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18,20-1210,T790M], [1-18,20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).</p>
+    <p>Many interesting things are found on these two plots. We see that the two first mutants ([1-18, 20-1210, C797S], [1-18, 20-1210, T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18, 20-1210, T790M], [1-18, 20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).</p>
     <p> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results.</p>
     <p> Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).</p>
     <p> Regarding the second plot, there are three mutations on this plot:</p>
@@ -150,7 +150,7 @@ title: Research on Protein Mutations and Ligand Binding
 
   <!-- 3D Protein Structures -->
   <section id="side-mutants-plot">
-    <h3>Visualization of 3D structures of EGFR & KAPCA WTs and Mutants</h3>
+    <h3>3D visualizations of proteins</h3>
     <p>
       We have shown many plots and values to talk about the impact of modifications of the structure of proteins on binding affinity and we wanted to also display the actual 3D structure of some of these proteins. The next interactive plots allow the user to visualize what some of the proteins look like. The WT protein is shown for both EGFR and KAPCA and two interesting mutants in both cases are displayed. For the mutants, grey parts represent deletions, and green spheres represent substitutions. Interestingly, we see that all the mutations are located in a similar subspace for the mutant KAPCA [L49I, V123M, E127D, Q181K, T183A], and a further analysis could look at the importance of this part of the structure for binding affinity.
      </p>
@@ -166,9 +166,9 @@ title: Research on Protein Mutations and Ligand Binding
     </div>
   </section>
 
-  <!-- Visualisation of Ligands' 3D Structure -->
+  <!-- Visualization of Ligands' 3D Structure -->
   <section id="3d-plot-ligand">
-    <h3>Visualisation of Ligands' 3D Structure</h3>
+    <h3>3D visualizations of ligands</h3>
     <p>
       For completeness, we have decided to also include the 3D visualization of the ligands. We hinted at the importance of the ligand in binding affinity even though we mostly focused on the importance of the protein, and another interesting project (maybe for next year ADA students) would be to investigate the structure of ligands in more details.
     </p>
