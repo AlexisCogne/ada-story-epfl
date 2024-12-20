@@ -104,7 +104,7 @@ title: Research on Protein Mutations and Ligand Binding
     <iframe src="public/assets/interactive_ic50_plot.html" width="120%" height="720" style="border:none;"></iframe>
     
     <p>Several interesting insights are observable on the subplots for the <strong>Interaction pair 2</strong> (EGFR_HUMAN). We see that the two first mutants (<span style="color: #4361ee;">[1-18, 20-1210, C797S]</span>, <span style="color: #f75c03;">[1-18, 20-1210, T790M, C797S]</span>) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 (<span style="color: #f1c40f;">[1-18, 20-1210, T790M]</span>, <span style="color: #ff0054;">[1-18, 20-1210]</span>), mutants 8 and 9 (<span style="color: #720026;">[L858R, C797S]</span>, <span style="color: #808000;">[L858R, T790M, C797S]</span>), and mutants 10 and 11 (<span style="color: #4361ee;">[L858R]</span>, <span style="color: #4cc9f0;">[T790M, L858R]</span>) Moreover, we also notice that for the mutant with the long deletion (<span style="color: #1d7874;">[668-1210,T790M,L858R]</span>), the IC50 log ratio is exafctly the same as for the mutant <span style="color: #4cc9f0;">[T790M, L858R]</span>. This indicates that the deletion has no direct impact on the binding affinity..</p>
-    <p> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results. Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).</p>
+    <p> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results. Also, the only two beneficial mutations are the mutants <span style="color: #ff0054;">[1-18, 20-1210]</span> (deletion at position 19) and <span style="color: #4361ee;">[L858R]</span> (Leucine to Arginine at position 858).</p>
     <p> The bottom plot displays three mutations:</p>
       <ul>
         <li>mutation at position 790 from Threonine to Methionine: the probability difference is around -0.2 meaning Threonine is more probable than Methionine according to ESM2. The difference being small, it is hard to draw any conclusions but the negative sign still indicates a similar idea as our previous plot in which we said that T790M was non-beneficial</li>
@@ -170,6 +170,11 @@ title: Research on Protein Mutations and Ligand Binding
     {% include_relative public/assets/ligand_representation_uni-box.html %}
   </section>
 
+  <!-- Conclusion mutant analysis -->
+  <section id="conclusion-mutants">
+    <h3>Final words on Mutant Analysis</h3>
+    <p> We have seen that we were able to identify key mutations sites for binding affinity and find examples of interactions where the ligand had an important impact on binding affinity. A next project could be to analyse the properties of the ligands and the mutated amino acids to try to find possible explanations for this impact. As mentioned earlier, looking at the 3D structure of the interaction could also validate some of the results we have found with our analysis.</p>
+  </section>
   <!-- Vertical Line-->
   <hr>
 
