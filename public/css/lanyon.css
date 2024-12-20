@@ -743,6 +743,23 @@ a.pagination-item:hover {
 }
 
 .plot-item {
+  flex: 0 1 45%;
+  max-width: 45%;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: auto; /* Adjusts to the tallest container in the row */
+}
+
+.plot-item img {
+  height: 100%; /* Scale the image to fit the container */
+  width: auto; /* Maintain the aspect ratio */
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plot-item-single {
   flex: 0 1 auto; /* Adjust width dynamically */
   display: flex;
   align-items: center; /* Center content vertically */
@@ -751,7 +768,7 @@ a.pagination-item:hover {
   max-width: 100%; /* Prevent the item from exceeding the container width */
 }
 
-.plot-item img {
+.plot-item-single img {
   height: auto; /* Maintain aspect ratio */
   max-height: 350px; /* Set a consistent height */
   width: auto; /* Maintain aspect ratio */
@@ -759,8 +776,6 @@ a.pagination-item:hover {
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-
 
 
 /* Side by Side 3D visualizations */
