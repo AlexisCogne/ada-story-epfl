@@ -778,7 +778,7 @@ a.pagination-item:hover {
 
 /* Images in Special Plots */
 .plot-item.special-plot img {
-  height: 380px; /* Set the same height for all images */
+  height: 360px; /* Set the same height for all images */
   width: auto; /* Maintain the original aspect ratio */
   display: block;
   border: 1px solid #ddd;
