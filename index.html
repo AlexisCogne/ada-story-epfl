@@ -215,10 +215,10 @@ title: Research on Protein Mutations and Ligand Binding
   <section id="embeddings-bipartite-graph">
     <h3>Analysis of protein and ligand interaction profiles through graphs</h3>
     
-    <h4><i>Towards better interpretability of protein and ligand language models</i></h4>
+    <h4><strong><i>Towards better interpretability of protein and ligand language models</i></strong></h4>
     <p>The strikingly low performance of powerful machine learning models in predicting protein-ligand interactions from ESM2 and ChemBERTa embeddings suggests that those language models, although encoding key features of proteins and ligands (e.g., ligand brain penetrability, toxicity, protein function) do not capture the information amino-acid and SMILES sequences contain about <strong>interaction</strong>. Graphs offer a promising framework to study interactions between different entities. In the following, we will leverage this approach to gain understanding on the information that is encoded in the protein and ligand latent spaces ESM2 and ChemBERTa provide.</p>
     
-    <h5>1. Constructing a protein-ligand bipartite graph with IC50 as an inverse weight function</h5>
+    <h5><strong>1. Constructing a protein-ligand bipartite graph with IC50 as an inverse weight function</strong></h5>
     <p>Interactions between proteins and ligands can be represented using a bipartite graph. Having chosen IC50 as our proxy for drug-target affinity, we defined the interaction weights of this graph as a monotonic, decreasing and positive function of IC50, additionally introducing a logarithm so as to account for the large variability in IC50 in the dataset, ranging from near-\(0\) to \(10^{13}\) concentration values.</p>
     <p>In the previous section, we restricted our analysis to proteins presenting more than 10 interactions in the dataset, and selected only the best-binding ligands. Yet, the non-optimal interactions between ligands and proteins still provide important information on their respective interaction profiles. Two ligands binding very poorly to a common protein might share similarity in structure, properties, etc.. That we why we reintroduce the complete preprocessed dataset in the following, and thereafter extract the subgraph that retains only the protein-ligand interactions studied in the previous section.</p>
     <img 
@@ -229,7 +229,7 @@ title: Research on Protein Mutations and Ligand Binding
 
   <!-- Unipartite Graph-->
   <section id="embedding-unipartite-graphs">
-    <h5>2. Extracting interaction profile similarities through bipartite graph projection</h5>
+    <h5><strong>2. Extracting interaction profile similarities through bipartite graph projection</strong></h5>
     <p>A bipartite graph can be projected onto a <strong>unipartite graph</strong> by connecting nodes that share a common neighbor, thereby representing only one type of entity instead of two. We adopted this strategy to compute the similarity of interaction profiles between proteins and between ligands respectively. Indeed, in a unipartite graph, the strength of the connection between two nodes reflects not only the number of common neighbors they share but also the strength of their interactions with those neighbors, i.e. how small is the IC50. Hence, if two proteins (resp. ligands) share a strong connection in the unipartite graph, it suggests that they have similar interaction profiles with ligands (resp. proteins). The connection weight therefore provides us with a <strong>ground-truth of interaction profile similarity</strong>.</p>
   
     <div class="plots-container">
@@ -246,7 +246,7 @@ title: Research on Protein Mutations and Ligand Binding
 
   <!-- Regression Plots-->
   <section id="embedding-regression-plots">
-    <h4>3. Correlating interaction profile similarity in protein and ligand unipartite graphs with their respective ESM2 and ChemBERTa representations</h4>
+    <h4><strong>3. Correlating interaction profile similarity in protein and ligand unipartite graphs with their respective ESM2 and ChemBERTa representations</strong></h4>
     <p>We can use this ground-truth similarity in interaction profiles to evaluate whether ChemBERTa and ESM2 embeddings capture this characteristic of ligands and proteins. Instead of expecting a perfect matching between unipartite weights and network representation similarities, we aim to identify an association.</p>
     <div class="plots-container">
       <!-- First Plot -->
@@ -260,7 +260,8 @@ title: Research on Protein Mutations and Ligand Binding
     </div>
     <p>While we should not place excessive emphasis on the exact values of the weights—given that they were manually defined using the IC50 to interaction strength mapping \( \frac{1}{\log(\cdot + 1.05)} \) ,we would still expect to observe a consistent relationship between the interaction weight and the cosine similarity of the embeddings, provided the embeddings capture information about the interaction profiles. Yet, we clearly see that the cosine similarity of ChemBERTa and ESM2 embeddings is not a monotonic function of the weight, although it is increasing together with it.</p>
     <p>Those results suggest that EMS2 and ChemBERTa protein and ligand representations do actually not capture the features needed to extract their interaction profiles, in turn potentially explaining the very poor performance of the predictive models we trained in the last section.</p>
-    <h4>4. Further perspectives into interaction-profile-aware clustering of ligands and proteins</h4>
+    
+    <h4></strong>4. Further perspectives into interaction-profile-aware clustering of ligands and proteins</strong></h4>
     <p>Conducting community analysis on protein and ligand unipartite graphs is a promising technique for identifying clusters that reflect specific interaction profiles. These clusters, unlike those obtained by clustering the low-dimensional projection of ChemBERTa and ESM2 embeddings, could serve as a foundation for predicting potential ligand classes associated with a given protein.</p>
   </section>
 
