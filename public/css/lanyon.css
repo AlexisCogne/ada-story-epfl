@@ -75,20 +75,20 @@ h1, h2, h3, h4, h5, h6 {
  .container {
   max-width: 45rem;
   margin: 0 auto; /* Center the container */
-  padding-top: 5rem; /* Add top padding to account for the masthead height */
+  padding-top: 2rem; /* Add top padding to account for the masthead height */
 }
 
 @media (min-width: 38em) {
   .container {
     max-width: 48rem; /* Increased width for medium screens */
-    padding-top: 5rem; /* Ensure consistent spacing on medium screens */
+    padding-top: 2rem; /* Ensure consistent spacing on medium screens */
   }
 }
 
 @media (min-width: 56em) {
   .container {
     max-width: 56rem; /* Increased width for large screens */
-    padding-top: 5rem; /* Ensure consistent spacing on large screens */
+    padding-top: 2rem; /* Ensure consistent spacing on large screens */
   }
 }
 
