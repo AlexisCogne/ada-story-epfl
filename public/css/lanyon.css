@@ -759,31 +759,6 @@ a.pagination-item:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Special Plots Container */
-.plots-container.special-plots {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px auto;
-  align-items: flex-start; /* Align items to the top */
-}
-
-/* Special Plot Items */
-.plot-item.special-plot {
-  display: flex;
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
-  height: auto; /* Allow the height to adjust based on content */
-}
-
-/* Images in Special Plots */
-.plot-item.special-plot img {
-  height: 360px; /* Set the same height for all images */
-  width: auto; /* Maintain the original aspect ratio */
-  display: block;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
 
 
 /* Side by Side 3D visualizations */
