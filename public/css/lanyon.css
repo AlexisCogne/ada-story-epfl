@@ -765,29 +765,26 @@ a.pagination-item:hover {
   justify-content: center;
   gap: 20px;
   margin: 20px auto;
-  align-items: center; /* Center items vertically */
+  align-items: flex-start; /* Align items to the top */
 }
 
 /* Special Plot Items */
 .plot-item.special-plot {
-  flex: 0 1 auto; /* Allow the width to adjust automatically */
-  max-width: 45%; /* Limit the maximum width to keep them proportional */
-  aspect-ratio: 4 / 3; /* Maintain a specific shape (e.g., 4:3) */
   display: flex;
   align-items: center; /* Center the image vertically */
   justify-content: center; /* Center the image horizontally */
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Prevent content overflow if dimensions differ */
+  height: auto; /* Allow the height to adjust based on content */
 }
 
 /* Images in Special Plots */
 .plot-item.special-plot img {
-  object-fit: cover; /* Ensures the image covers the container */
-  width: 100%; /* Scale image to fill the width */
-  height: 100%; /* Scale image to fill the height */
+  height: 300px; /* Set the same height for all images */
+  width: auto; /* Maintain the original aspect ratio */
   display: block;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Side by Side 3D visualizations */
 .mutants-container {
