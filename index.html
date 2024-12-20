@@ -195,15 +195,15 @@ title: Research on Protein Mutations and Ligand Binding
     <p>Given this context, there was a true motivation to investigate whether transformer-generated embeddings of proteins and ligands could already capture binding affinity information. This approach would offer deeper insight into the features learned by transformers. The hypothesis is that if proteins and ligands form clusters within their respective embedding spaces, with similar proteins clustering with similar ligands, then these proteins would likely bind to corresponding families of ligands, suggesting that affinity relationships may be encoded in the embeddings rather than pinpointing a single best ligand.</p>
     <h3>First insights</h3>
     <p>To test this hypothesis, proteins were selected from the BindingDB dataset using the criteria that at least 10 ligands had been tested to ensure sufficient data for ligand matching. For each protein, the ligand with the lowest IC50 value (meaning higher binding affinity) was selected to create high-affinity protein-ligand pairs. Due to computational constraints, a subset of these proteins was embedded using ESM-2 in this preliminary stage. The initial visualization of these embeddings revealed interesting clustering based on protein families, suggesting that ESM-2 captures family-related information effectively.</p>
-    <div class="plot-item-singe">
+    <div class="plot-item-single">
       <img 
         src="public/assets/embeddings/clustering_protein_embedding.png" 
         alt="Clustering of Protein Embeddings" 
         style="width:auto; height:350px; display:block; margin: 0 auto;" />
     </div>
     <p>Next, ligands were embedded using the ChemBERTa transformer. To group ligands, two approaches were considered: using ligand taxonomy or applying unsupervised clustering techniques (e.g., k-Means, DBSCAN). Due to time constraints, manual taxonomy was not feasible, and automatic taxonomy via <a href ="http://classyfire.wishartlab.com/">Classyfire</a> was unavailable due to API issues. As a result, unsupervised clustering was pursued. The embeddings were projected into a lower-dimensional space, and the clusters were analyzed for biological relevance. The clustering revealed eight spherical clusters, with five major ones and smaller clusters on the periphery. k-Means clustering appeared to be a suitable method for classification (left subplot below).</p>
-    <p>To further explore the clusters, 20 ligands were randomly sampled from three classes and manually input into Classyfire for taxonomy classification (plot below). While generating additional taxonomy data to validate the clusters was time-consuming, this preliminary analysis suggested that the clusters might correspond to distinct Superclasses as defined by Classyfire. Given that the analysis was not dependent on Classyfire's labels, no further validation was pursued.</p>
-    <div class="plot-item-singe">
+    <p>To further explore the clusters, 20 ligands were randomly sampled from three classes and manually input into Classyfire for taxonomy classification (right subplot above). A lot of overlap can be seen between the top subclasses in the three clusters and we thus decided to not pursue this route.</p>
+    <div class="plot-item-single">
       <img 
         src="public/assets/embeddings/distribution_embedding.png" 
         alt="Distribution of Superclasses" 
