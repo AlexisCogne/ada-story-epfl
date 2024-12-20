@@ -195,7 +195,7 @@ title: Research on Protein Mutations and Ligand Binding
     <p>Given this context, there was a true motivation to investigate whether transformer-generated embeddings of proteins and ligands could already capture binding affinity information. This approach would offer deeper insight into the features learned by transformers. The hypothesis is that if proteins and ligands form clusters within their respective embedding spaces, with similar proteins clustering with similar ligands, then these proteins would likely bind to corresponding families of ligands, suggesting that affinity relationships may be encoded in the embeddings rather than pinpointing a single best ligand.</p>
     <h3>First insights</h3>
     <p>To test this hypothesis, proteins were selected from the BindingDB dataset using the criteria that at least 10 ligands had been tested to ensure sufficient data for ligand matching. For each protein, the ligand with the lowest IC50 value (meaning higher binding affinity) was selected to create high-affinity protein-ligand pairs. Due to computational constraints, a subset of these proteins was embedded using ESM-2 in this preliminary stage. The initial visualization of these embeddings revealed interesting clustering based on protein families, suggesting that ESM-2 captures family-related information effectively.</p>
-    <div class="plot-item-single">
+    <div class="plot-item-single" style="padding-bottom: 15px;">
       <img 
         src="public/assets/embeddings/clustering_protein_embedding.png" 
         alt="Clustering of Protein Embeddings" 
