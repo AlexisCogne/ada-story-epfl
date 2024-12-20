@@ -22,7 +22,7 @@ title: Research on Protein Mutations and Ligand Binding
   <section id="mutant-analysis">
     <h2>Mutants Analysis</h2>
     <p>
-      Protein mutations are a key component to understand in many biological fields such as drug development. Indeed, mutations can impact how a protein will bind to a given molecule, referred as ligand, and this needs to be taken into account to create drugs that work for a vaste majority of the population for example. Our curiosity about this impact was what initiated our first study. We extracted the five “interaction pairs” with the higher number of mutants from BindingDB to display and analyse. An “interaction pair” here refers to a ligand and a group of similar proteins, i.e. a wild-type (WT) protein and its mutants.
+      Protein mutations play a pivotal role in understanding various biological processes, especially in drug development. These mutations can significantly influence how a protein interacts with specific molecules, known as ligands. Accounting for these variations is essential when designing drugs that aim to be effective for a broad population. This crucial interplay between mutations and ligand binding sparked our curiosity and inspired the focus of the mutant analysis. We extracted the five “interaction pairs” with the highest number of mutants from BindingDB to display and analyse. An “interaction pair” here refers to a ligand and a group of similar proteins, i.e. a wild-type (WT) protein and its mutants.
 
       It would be too long to analyse in details every single one of those five interactions, so we have decided to focus on one that we found interesting because it includes all kinds of mutations (insertions, deletions, and substitutions). Nevertheless, all plots are available for every interaction pairs and can be displayed by selecting the corresponding dropdown option. Here is a summary of the five interaction pairs.
     </p>
@@ -62,9 +62,9 @@ title: Research on Protein Mutations and Ligand Binding
     <p>
       We briefly explain here the notation used to describe mutations. There are three types of mutations:
       <ul>
-        <li> A substitution is a mutation that changes the type of amino acid at a given position. For example, T790M means that at position 790 on the target sequence, the amino acid Threonine was mutated to Methionine</li>
-        <li> A deletion is a mutation that shortens the length of the protein. For example, [30-120] means that the protein was truncated and only the sequence from amino acid 30 to 120 remain. A deletion of a single amino acid at position 19 would be indicated by [1-18, 20-120]</li>
-        <li> An insertion is a mutation that makes the protein longer by introducing amino acids. [1-769, ASV,770-1210] means that three amino acids were inserted between amino acid at position 769 and amino acid at position 770, respectively Alanine, Serine, and Valine</li>
+        <li> A <strong>substitution</strong> is a mutation that changes the type of amino acid at a given position. For example, T790M means that at position 790 on the target sequence, the amino acid Threonine was mutated to Methionine</li>
+        <li> A <strong>deletion</strong> is a mutation that shortens the length of the protein. For example, [30-120] means that the protein was truncated and only the sequence from amino acid 30 to 120 remain. A deletion of a single amino acid at position 19 would be indicated by [1-18, 20-120]</li>
+        <li> An <strong>insertion</strong> is a mutation that makes the protein longer by introducing amino acids. [1-769, ASV,770-1210] means that three amino acids were inserted between amino acid at position 769 and amino acid at position 770, respectively Alanine, Serine, and Valine</li>
       </ul>
     </p>
   </section>
@@ -85,7 +85,7 @@ title: Research on Protein Mutations and Ligand Binding
     </ul>
     
 
-    <p>With this alignment, variations against the reference, and patterns across mutants, become instantly visible, offering insights into how these changes might relate to functional outcomes, like shifts in IC50 values.</p>
+    <p>With this alignment, variations against the reference, and patterns across mutants, become instantly visible, offering insights into how these changes might relate to functional outcomes, like shifts in IC50 values. Pick an interaction pair, scroll through the protein sequences, and you’ll see the different types of mutations neatly aligned, ready to reveal their story.</p>
 
     <iframe
       src="public/assets/alignments.html"
@@ -103,7 +103,7 @@ title: Research on Protein Mutations and Ligand Binding
     
     <iframe src="public/assets/interactive_ic50_plot_18_12.html" width="120%" height="720" style="border:none;"></iframe>
     
-    <p>Many interesting things are found on these two plots. We see that the two first mutants ([1-18, 20-1210, C797S], [1-18, 20-1210, T790M, C797S]) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18, 20-1210, T790M], [1-18, 20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).</p>
+    <p>Several interesting insights are observable on the subplots for the Interaction pair 2 (EGFR_HUMAN). We see that the two first mutants (<span style="color: #4361ee;">[1-18, 20-1210, C797S]</span>, <span style="color: #f75c03;">[1-18, 20-1210, T790M, C797S]</span>) are very similar in terms of mutations, i.e., the second mutant has one extra point mutation at position 790 (from T to M). Nevertheless, we see a big difference on the y-axis between those two mutants. We can thus understand that the mutation at position 790 results in a great reduction of the binding affinity (even if most of the mutations on this plot are non-beneficial). The same exact conclusion can be drawn by looking at mutants 3 and 4 ([1-18, 20-1210, T790M], [1-18, 20-1210]), mutants 8 and 9 ([L858R, C797S], [L858R, T790M, C797S]), and mutants 10 and 11 ([L858R], [T790M, L858R]).</p>
     <p> A next step for this project could be to dig further in this given interaction and visualize the 3D structure of the binding to understand the importance of the mentioned position. This could be used to validate experimentally found results.</p>
     <p> Also, the only two beneficial mutations are the mutants [1-18, 20-1210] (deletion at position 19) and [L858R] (Leucine to Arginine at position 858).</p>
     <p> Regarding the second plot, there are three mutations on this plot:</p>
