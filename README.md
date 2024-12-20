@@ -3,7 +3,7 @@
 ## Team Abrac-Adabra 
 - **Title** *Mutation-driven insights into protein structure and ligand group prediction through protein and ligand embeddings* <br />
 - **Repository** The project repository can be found <a href="https://github.com/epfl-ada/ada-2024-project-abrac-adabra/tree/main" target="_blank">[here]</a>
-<img width="802" alt="image" src="https://github.com/user-attachments/assets/1c8cf589-2018-486b-b2b5-75c11dbfebe4" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/1c8cf589-2018-486b-b2b5-75c11dbfebe4" />
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
     <th style="padding: 10px; text-align: left;">Team Members</th>
