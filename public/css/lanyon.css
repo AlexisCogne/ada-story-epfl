@@ -739,26 +739,55 @@ a.pagination-item:hover {
   justify-content: center;
   gap: 20px;
   margin: 20px auto;
-  align-items: flex-start; /* Align items to the top instead of stretching */
+  align-items: stretch; /* Ensures all items align to the tallest element */
 }
 
 .plot-item {
-  flex: 0 1 45%; /* Allow flexibility while keeping width proportional */
+  flex: 0 1 45%;
   max-width: 45%;
   display: flex;
-  align-items: center; /* Center the image vertically in the item */
-  justify-content: center; /* Center the image horizontally in the item */
-  height: auto; /* Ensure container adjusts to image's height */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: auto; /* Adjusts to the tallest container in the row */
 }
 
 .plot-item img {
-  max-width: 100%; /* Prevent image from exceeding container width */
-  height: auto; /* Maintain aspect ratio without stretching */
+  height: 100%; /* Scale the image to fit the container */
+  width: auto; /* Maintain the aspect ratio */
   display: block;
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Special Plots Container */
+.plots-container.special-plots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  align-items: center; /* Center items vertically */
+}
+
+/* Special Plot Items */
+.plot-item.special-plot {
+  flex: 0 1 auto; /* Allow the width to adjust automatically */
+  max-width: 45%; /* Limit the maximum width to keep them proportional */
+  aspect-ratio: 4 / 3; /* Maintain a specific shape (e.g., 4:3) */
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent content overflow if dimensions differ */
+}
+
+/* Images in Special Plots */
+.plot-item.special-plot img {
+  object-fit: cover; /* Ensures the image covers the container */
+  width: 100%; /* Scale image to fill the width */
+  height: 100%; /* Scale image to fill the height */
+  display: block;
+}
 
 /* Side by Side 3D visualizations */
 .mutants-container {

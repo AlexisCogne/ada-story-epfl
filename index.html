@@ -194,13 +194,13 @@ title: Research on Protein Mutations and Ligand Binding
     <p>While transformers were initially developed for natural language processing, their application in bioinformatics, particularly for analyzing molecular properties based on sequence data, has become increasingly significant. These models have become the standard for representation learning—the process of automatically learning useful features from raw data to improve task performance—owing to their exceptional ability to transfer knowledge across a wide range of downstream tasks. In protein analysis, models like <a href="https://www.biorxiv.org/content/10.1101/2022.07.20.500902v3">ESM-2</a> (Evolutionary Scale Modeling) have shown promise in predicting protein structure, stability, and function by leveraging sequence information. Similarly, for ligands, transformer-based models like <a href="https://arxiv.org/abs/2010.09885">ChemBERTa</a> have been used to predict molecular properties, including binding affinity, by encoding the sequence of atoms and bonds. These models learn key features within sequences, enabling their use in downstream tasks such as ligand-protein binding prediction and drug discovery, where understanding the relationship between molecular structure and biological activity is crucial (<a href="https://www.biorxiv.org/content/10.1101/2024.02.08.575577v3.full">PLAPT</a> , <a href="https://academic.oup.com/bioinformatics/article/40/9/btae533/7747660">DTI-LM</a>). </p>
     <p>Given this context, there was a true motivation to investigate whether transformer-generated embeddings of proteins and ligands could already capture binding affinity information. This approach would offer deeper insight into the features learned by transformers. The hypothesis is that if proteins and ligands form clusters within their respective embedding spaces, with similar proteins clustering with similar ligands, then these proteins would likely bind to corresponding families of ligands, suggesting that affinity relationships may be encoded in the embeddings rather than pinpointing a single best ligand.</p>
     <p>To test this hypothesis, proteins were selected from the BindingDB dataset using the criteria that at least 10 ligands had been tested to ensure sufficient data for ligand matching. For each protein, the ligand with the lowest IC50 value (meaning higher binding affinity) was selected to create high-affinity protein-ligand pairs. Due to computational constraints, a subset of these proteins was embedded using ESM-2 in this preliminary stage. The initial visualization of these embeddings revealed interesting clustering based on protein families, suggesting that ESM-2 captures family-related information effectively (left plot).</p>
-    <div class="plots-container">
+    <div class="plots-container special-plots">
       <!-- First Plot -->
-      <div class="plot-item">
+      <div class="plot-item special-plot">
         <img src="public/assets/embeddings/clustering_protein_embedding.png" alt="Clustering of Protein Embeddings">
       </div>
       <!-- Second Plot -->
-      <div class="plot-item">
+      <div class="plot-item special-plot">
         <img src="public/assets/embeddings/distribution_embedding.png" alt="Distribution of Superclasses">
       </div>
     </div>
