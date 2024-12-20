@@ -204,7 +204,7 @@ title: Research on Protein Mutations and Ligand Binding
         <img src="public/assets/embeddings/distribution_embedding.png" alt="Distribution of Superclasses">
       </div>
     </div>
-    <p>Next, ligands were embedded using the ChemBERTa transformer. To group ligands, two approaches were considered: using ligand taxonomy or applying unsupervised clustering techniques (e.g., k-Means, DBSCAN). Due to time constraints, manual taxonomy was not feasible, and automatic taxonomy via Classyfire (http://classyfire.wishartlab.com/) was unavailable due to API issues. As a result, unsupervised clustering was pursued. The embeddings were projected into a lower-dimensional space, and the clusters were analyzed for biological relevance. The clustering revealed nine spherical clusters, with five major ones and smaller clusters on the periphery. k-Means clustering appeared to be a suitable method for classification (FIGURE 2). To assess the biological relevance of these clusters, the features were examined to ensure that clustering was not solely based on simple properties like SMILES length (FIGURE 3). The absence of systematic differences in SMILES length across clusters indicated that more complex features were likely driving the clustering.</p>
+    <p>Next, ligands were embedded using the ChemBERTa transformer. To group ligands, two approaches were considered: using ligand taxonomy or applying unsupervised clustering techniques (e.g., k-Means, DBSCAN). Due to time constraints, manual taxonomy was not feasible, and automatic taxonomy via <a href ="http://classyfire.wishartlab.com/">Classyfire</a> was unavailable due to API issues. As a result, unsupervised clustering was pursued. The embeddings were projected into a lower-dimensional space, and the clusters were analyzed for biological relevance. The clustering revealed nine spherical clusters, with five major ones and smaller clusters on the periphery. k-Means clustering appeared to be a suitable method for classification (FIGURE 2). To assess the biological relevance of these clusters, the features were examined to ensure that clustering was not solely based on simple properties like SMILES length (FIGURE 3). The absence of systematic differences in SMILES length across clusters indicated that more complex features were likely driving the clustering.</p>
     <p>To further explore the clusters, 20 ligands were randomly sampled from three classes and manually input into Classyfire for taxonomy classification (FIGURE 4). While generating additional taxonomy data to validate the clusters was time-consuming, this preliminary analysis suggested that the clusters might correspond to distinct Superclasses as defined by Classyfire. Given that the analysis was not dependent on Classyfire's labels, no further validation was pursued.</p>
     <p>With an initial understanding of the biological relevance of the embeddings, all selected proteins were embedded and labeled by their corresponding matched ligands (FIGURE 5). However, the resulting embeddings appeared sparse and unstructured when visualized using UMAP, suggesting that the dimensionality reduction technique failed to capture underlying patterns. As a result, classification performance on these embeddings was predicted to be low. Indeed, when tested with four classifiers—kNN, SVM, logistic regression, and MLP—using grid search for hyperparameter optimization and cross-validation, the balanced accuracy never exceeded 0.12, indicating poor performance. Given the sparsity observed in the UMAP visualizations, we attempted to classify directly from the 320-dimensional ESM-2 embeddings. However, the curse of dimensionality hindered the performance of kNN, and all models failed to achieve balanced accuracy above 0.12. These results suggest that the ESM-2 embeddings do not directly encode binding information related to ligand families.</p>
     <iframe src="public/assets/embeddings/3d_combined_clustering_plot.html" width="100%" height="500" style="border:none;"></iframe>
@@ -263,16 +263,5 @@ title: Research on Protein Mutations and Ligand Binding
     
     <h4></strong>4. Further perspectives into interaction-profile-aware clustering of ligands and proteins</strong></h4>
     <p>Conducting community analysis on protein and ligand unipartite graphs is a promising technique for identifying clusters that reflect specific interaction profiles. These clusters, unlike those obtained by clustering the low-dimensional projection of ChemBERTa and ESM2 embeddings, could serve as a foundation for predicting potential ligand classes associated with a given protein.</p>
-  </section>
-
- <!-- Vertical Line-->
- <hr>
-
- <!-- Conclusion-->
-  <section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>
-      To be AADEDDEDDEDED
-    </p>
   </section>
 </div>
